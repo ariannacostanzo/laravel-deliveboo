@@ -6,6 +6,7 @@
         {{ __('Dashboard') }}
     </h2>
     <div class="row justify-content-center">
+        
         <div class="col">
             <div class="card">
                 <div class="card-header">{{ __('User Dashboard') }}</div>
