@@ -13,7 +13,8 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        $dishes = Dish::all();
+        return view('admin.dishes.index', compact('dishes'));
     }
 
     /**
@@ -37,7 +38,7 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
-        //
+        return view('admin.dishes.show', compact('dish'));
     }
 
     /**
@@ -61,6 +62,7 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
-        //
+        $dish->delete();
+        return to_route('admin.dishes.index');
     }
 }
