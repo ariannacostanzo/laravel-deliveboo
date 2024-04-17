@@ -22,13 +22,22 @@
 <body>
     <div id="app">
 
-        
+
         @include('includes.header')
 
         <main class="">
+
+            {{-- alert  --}}
+            @include('includes.alert')
+
             @yield('content')
         </main>
     </div>
+
+    {{-- script per l'alert che sparisce da solo --}}
+    @session('message')
+        @vite('resources/js/close_alerts.js')
+    @endsession
 </body>
 
 </html>
