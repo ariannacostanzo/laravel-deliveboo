@@ -21,5 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call(RestaurantSeeder::class);
+        $this->call(DishSeeder::class);
+        \App\Models\Dish::factory(30)->create();
     }
 }
