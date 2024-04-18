@@ -75,3 +75,11 @@ th {
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgba(228, 220, 209, 0.897);;
 }
+
+.image-placeholder {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}

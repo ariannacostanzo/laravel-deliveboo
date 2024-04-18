@@ -64,10 +64,18 @@
                             </div>
                     </div>
                 </div>
-                <div class="col-10 py-4">
-                    <label for="image" class="form-label">Immagine</label>
-                    <input dish="image" class="form-control @error('image') is-invalid @elseif(old('image', '')) is-valid  @enderror" id="image" name="image" value="{{ old('image', $dish->image) }}">
-                    @error ('image') <div class="invalid-feedback"> {{$message}}</div> @enderror
+                <div class="col-12 py-4 d-flex align-items-center">
+
+                    <div class="col-8 py-4">
+                        <label for="image" class="form-label">Immagine</label>
+                        <input dish="image" class="form-control @error('image') is-invalid @elseif(old('image', '')) is-valid  @enderror" id="image" name="image" value="{{ old('image', $dish->image) }}">
+                        @error ('image') <div class="invalid-feedback"> {{$message}}</div> @enderror
+                    </div>
+                    <div class="col-4 ms-3">
+                        <figure class="image-placeholder">
+                            <img src="{{$dish->image ? $dish->image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg'}}" alt="placeholder" id="placeholder-thumb" >
+                        </figure>
+                    </div>
                 </div>
             </div>
             <div class="d-flex justify-content-between align-items-center container">
@@ -82,8 +90,8 @@
     </div>
 </main>
 
+@endsection
 
-
-
-
+@section('scripts')
+    @vite('resources/js/preview_img.js')
 @endsection

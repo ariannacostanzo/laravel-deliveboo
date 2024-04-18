@@ -37,10 +37,13 @@
         </main>
     </div>
 
+    @yield('scripts')
+
     {{-- script per l'alert che sparisce da solo --}}
     @session('message')
         @vite('resources/js/close_alert.js')
     @endsession
+    
 </body>
 
 </html>

@@ -11,7 +11,8 @@ export default defineConfig({
             input: [
                 'resources/scss/app.scss', 
                 'resources/js/app.js',
-                'resources/js/close_alert.js'
+                'resources/js/close_alert.js',
+                'resources/js/preview_img.js'
             ],
             refresh: true,
         }),

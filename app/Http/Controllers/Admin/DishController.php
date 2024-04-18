@@ -57,7 +57,7 @@ class DishController extends Controller
        
 
 
-        return to_route('admin.dishes.index', $dish->id)->with('message', "$dish->name creato con sucesso")->with('type', 'success');
+        return to_route('admin.dishes.show', $dish->id)->with('message', "$dish->name creato con sucesso")->with('type', 'success');
     }
 
     /**
