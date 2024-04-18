@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->id();
-            $table->string('lable')->required();
+            $table->string('label')->required();
             $table->string('icon')->nullable();
             $table->timestamps();
         });
