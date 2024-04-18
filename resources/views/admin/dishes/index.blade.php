@@ -3,7 +3,7 @@
 @section('title', 'Piatti')
 
 @section('content')
-
+@include('includes.modal')
     <header>
         <h1 class="text-center my-4">Piatti</h1>
     </header>
@@ -19,7 +19,7 @@
                 <th scope="col">Modificata il</th>
                 <th>
                     <div class="d-flex justify-content-end">
-                        <a href="{{ route('admin.dishes.create') }}" class="btn btn-sm btn-success"><i
+                        <a href="{{ route('admin.dishes.create') }}" class="btn btn-sm cm-btn-primary"><i
                                 class="fas fa-plus me-2"></i>Nuovi Piatti</a>
                     </div>
                 </th>
@@ -27,6 +27,7 @@
         </thead>
         <tbody>
             @forelse($dishes as $dish)
+            
                 <tr>
                     <td>
                         {{ $dish->name }}
@@ -61,11 +62,15 @@
 
                             <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-sm btn-warning"> <i
                                     class="fas fa-pencil"></i></a>
-                            <form action="{{ route('admin.dishes.destroy', $dish) }}" method="POST" class="delete-form">
+                            
+                            {{-- modale  --}}
+                            <form action="{{ route('admin.dishes.destroy', $dish->id) }}" method="POST"
+                            class="delete-form" data-bs-toggle="modal" data-bs-target="#delete-modal"
+                            data-dish="{{ $dish->name }}">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash-can"></i></button>
-                            </form>
+                            <button class="btn btn-sm btn-danger"><i class="fa-regular fa-trash-can"></i></button>
+                        </form>
                         </div>
                     </td>
                 </tr>
@@ -81,21 +86,13 @@
         </tbody>
 
     </table>
-    <div class="container">
+    <div class="container py-3">
         @if ($dishes->hasPages())
             {{ $dishes->links() }}
         @endif
     </div>
 @endsection
+
 @section('scripts')
-
-    {{-- <script>
-        const toggleVisibleForms = document.querySelectionAll('.visible-form');
-
-        toggleVisibleForms.forEach(form => {
-            form.addEventListener('click', e => {
-                form.submit();
-            })
-        })
-    </script> --}}
+   @vite('resources/js/modal.js') 
 @endsection
