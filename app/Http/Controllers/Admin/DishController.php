@@ -13,7 +13,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        $dishes = Dish::all();
+        $dishes = Dish::orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10);
         return view('admin.dishes.index', compact('dishes'));
     }
 
@@ -63,6 +63,21 @@ class DishController extends Controller
     public function destroy(Dish $dish)
     {
         $dish->delete();
-        return to_route('admin.dishes.index');
+        return to_route('admin.dishes.index') > with('message', "Il piatto $dish->name è stato eliminato con successo")->with('type', 'danger');;
+    }
+
+
+    // Rotta Per I piatti visibili
+
+    public function toggleVisible(Dish $dish)
+    {
+        $dish->is_visible = !$dish->is_visible;
+        $dish->save();
+
+        $action = $dish->is_visible ? 'visibile' : 'non pubblicato';
+        $type = $dish->is_visible ? 'success' : 'info';
+
+
+        return back()->with('message', "Il piatto $dish->name è stato $action")->with('type', $type);
     }
 }

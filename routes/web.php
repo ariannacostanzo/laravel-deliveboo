@@ -25,6 +25,7 @@ Route::get('/dashboard', function () {
 
 
 Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
+    Route::patch('/dishes/{dish}/visible', [AdminDishController::class, 'toggleVisible'])->name('dishes.visible');
     Route::resource('/dishes', AdminDishController::class);
 });
 
