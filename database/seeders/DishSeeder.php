@@ -104,7 +104,7 @@ class DishSeeder extends Seeder
                 'ingredients' => 'Verdure Miste, Farina, Uova',
                 'price' => 5.00,
                 'restaurant_id' => 1,
-                'image' => ''
+                'image' => 'https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/04/11-tempura-di-verdure-servi__MG_6906.jpg'
             ],
             [
                 'name' => 'Uramaki California',
@@ -919,5 +919,6 @@ class DishSeeder extends Seeder
             $new_dish->fill($dish);
             $new_dish->save();
         }
+
     }
 }
