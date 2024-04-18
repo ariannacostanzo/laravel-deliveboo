@@ -7,7 +7,7 @@
     <header>
         <h1 class="text-center my-4">Piatti</h1>
     </header>
-    <table class="table table-dark table-striped container">
+    <table class="table table-striped container">
         <thead>
             <tr>
                 <th scope="col">Nome</th>
@@ -19,8 +19,8 @@
                 <th scope="col">Modificata il</th>
                 <th>
                     <div class="d-flex justify-content-end">
-                        {{-- <a href="{{ route('admin.dishes.create') }}" class="btn btn-sm btn-success"><i
-                                class="fas fa-plus me-2"></i>Nuovi Piatti</a> --}}
+                        <a href="{{ route('admin.dishes.create') }}" class="btn btn-sm btn-success"><i
+                                class="fas fa-plus me-2"></i>Nuovi Piatti</a>
                     </div>
                 </th>
             </tr>
@@ -33,35 +33,35 @@
                     </td>
                     <td>
                         @if ($dish->ingredients)
-                            {{ $dish->ingredients }}
+                            {{ $dish->getAbstract() }}
                         @else
                             Nessun Ingrediente
                         @endif
                     </td>
-                    <td>{{ $dish->price }}</td>
-                    <td> <img src="{{ $dish->image }}" alt="{{ $dish->name }}" width="50px"> </td>
+                    <td>{{ $dish->price }} €</td>
+                    <td> <img class="image-small" src="{{ $dish->image ? $dish->image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg' }}"  alt="{{ $dish->name }}" > </td>
                     <td>
-                        <form action="{{ route('admin.dishes.visible', $dish->id) }}" method="POST" class="visible-form">
+                        <form action="{{ route('admin.dishes.visible', $dish->id) }}" method="POST" class="visible-form" onclick="this.submit()">
                             @csrf
                             @method('PATCH')
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="button" id="is_visible"
+                                <input class="form-check-input" type="checkbox" role="button" id="{{'is_visible' . $dish->id}}" name="is_visible"
                                     @if ($dish->is_visible) checked @endif>
                                 <label class="form-check-label"
-                                    for="is_visible">{{ $dish->is_visible ? 'Visibile' : 'Non Visibile' }}</label>
+                                    for="{{'is_visible' . $dish->id}}">{{ $dish->is_visible ? 'Visibile' : 'Non Visibile' }}</label>
                             </div>
                         </form>
                     </td>
-                    <td>{{ $dish->created_at }}</td>
-                    <td>{{ $dish->updated_at }}</td>
+                    <td>{{ $dish->getFormattedDate($dish->created_at) }}</td>
+                    <td>{{ $dish->getFormattedDate($dish->updated_at) }}</td>
                     <td>
                         <div class="d-flex justify-content-end gap-2">
                             <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-sm btn-primary"><i
                                     class="fas fa-eye"></i></a>
 
-                            {{-- <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-sm btn-warning"> <i
+                            <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-sm btn-warning"> <i
                                     class="fas fa-pencil"></i></a>
-                            <form action="{{ route('admin.dishes.destroy', $dish) }}" method="POST" class="delete-form"> --}}
+                            <form action="{{ route('admin.dishes.destroy', $dish) }}" method="POST" class="delete-form">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash-can"></i></button>
@@ -89,7 +89,7 @@
 @endsection
 @section('scripts')
 
-    <script>
+    {{-- <script>
         const toggleVisibleForms = document.querySelectionAll('.visible-form');
 
         toggleVisibleForms.forEach(form => {
@@ -97,5 +97,5 @@
                 form.submit();
             })
         })
-    </script>
+    </script> --}}
 @endsection

@@ -67,12 +67,3 @@
 
 
 @endsection
-
-{{--
-<div class="form-group">
-    <label class="form-check-label" for="is_visible">Visibilità</label>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="is_visible" id="is_visible" @if (old('is_visible')==1)
-            checked @endif value="1">
-    </div>
-    --}}

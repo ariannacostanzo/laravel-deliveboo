@@ -14,7 +14,9 @@ class DishController extends Controller
      */
     public function index()
     {
-        $dishes = Dish::orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10);
+        $user_id = Auth::id();
+        // $dishes = Dish::whereRestaurantId($user_id)->orderBy('name')->orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10);
+        $dishes = Dish::orderByDesc('name')->orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10);
         return view('admin.dishes.index', compact('dishes'));
     }
 
@@ -97,7 +99,7 @@ class DishController extends Controller
         $data = $request->all();
         $dish->update($data);
 
-        return to_route('admin.dishes.index', $dish->id)->with('message', "$dish->name modificato con sucesso")->with('type', 'info');
+        return to_route('admin.dishes.index', $dish->id)->with('message', "$dish->name modificato con successo")->with('type', 'info');
     }
 
     /**
@@ -106,7 +108,7 @@ class DishController extends Controller
     public function destroy(Dish $dish)
     {
         $dish->delete();
-        return to_route('admin.dishes.index') > with('message', "Il piatto $dish->name è stato eliminato con successo")->with('type', 'danger');;
+        return to_route('admin.dishes.index')->with('message', "Il piatto $dish->name è stato eliminato con successo")->with('type', 'danger');;
     }
 
 
@@ -117,10 +119,10 @@ class DishController extends Controller
         $dish->is_visible = !$dish->is_visible;
         $dish->save();
 
-        $action = $dish->is_visible ? 'visibile' : 'non pubblicato';
-        $type = $dish->is_visible ? 'success' : 'info';
+        $action = $dish->is_visible ? 'visibile' : 'nascosto';
+        $type = $dish->is_visible ? 'info' : 'info';
 
 
-        return back()->with('message', "Il piatto $dish->name è stato $action")->with('type', $type);
+        return back()->with('message', "Il piatto $dish->name è $action")->with('type', $type);
     }
 }
