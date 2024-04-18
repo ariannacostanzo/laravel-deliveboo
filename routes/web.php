@@ -23,9 +23,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
+    Route::patch('/dishes/{dish}/visible', [AdminDishController::class, 'toggleVisible'])->name('dishes.visible');
     Route::resource('/dishes', AdminDishController::class);
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -35,4 +38,4 @@ Route::middleware('auth')->group(function () {
     Route::resource('/dishes', AdminDishController::class);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

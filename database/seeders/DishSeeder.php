@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Dish;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Dish;
 
 class DishSeeder extends Seeder
 {
@@ -863,13 +863,6 @@ class DishSeeder extends Seeder
                 'image' => 'https://www.giallozafferano.it/images/195-19577/Kebab-vegetariano_780x520_wm.jpg'
             ],
             [
-                'name' => 'Adana Kebab',
-                'ingredients' => 'Carne di Agnello/Manzo, Pane Pita, Insalata, Pomodoro, Cipolla, Peperoncino',
-                'price' => 11.99,
-                'restaurant_id' => 6,
-                'image' => 'https://www.seriouseats.com/thmb/IVzgrLg6lmc_VvMjsfZAxI6Cx3E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2014__04__20140428-adana-kebab-22-2f4debebf43d462ba045e041a9e9add4.jpg'
-            ],
-            [
                 'name' => 'Kebab con Patatine',
                 'ingredients' => 'Carne di Maiale/Pollo, Pane Pita, Insalata, Pomodoro, Cipolla, Patatine Fritte',
                 'price' => 10.99,
@@ -919,6 +912,5 @@ class DishSeeder extends Seeder
             $new_dish->fill($dish);
             $new_dish->save();
         }
-
     }
 }
