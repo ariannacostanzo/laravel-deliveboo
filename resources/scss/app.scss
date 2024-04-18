@@ -1,1 +1,77 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+// fonts 
+@font-face {
+    font-family: 'More Sugar';
+    src: url('/fonts/more-sugar.regular.ttf')
+}
+
+@font-face {
+    font-family: 'More Sugar Thin';
+    src: url('/fonts/more-sugar.thin.ttf')
+}
+
+body {
+    visibility: visible;
+    font-family: 'More Sugar Thin';
+}
+
+// header 
+.my-header {
+    background-color: #f48c06;
+    box-shadow: 0 0 5px black;
+    font-family: 'More Sugar';
+    font-size: 18px;
+}
+
+h1{
+    font-family: 'More Sugar';
+}
+
+th {
+    font-family: 'More Sugar Thin';
+    font-size: 18px;
+}
+
+.dropdown-menu {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+//immagini 
+
+.image-small {
+    object-fit: cover;
+    object-position: center;
+    width: 60px;
+    height: 40px;
+}
+
+.image-large-container {
+    width: 500px;
+}
+
+.image-large {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.icon-small {
+    width: 100px;
+}
+
+.show {
+    display: block;
+}
+
+// radio button 
+
+.form-check-input:checked {
+    background-color: #f48c06;
+    border-color: #f48c06;
+}
+
+.form-check-input:focus {
+    border-color: #f48c06;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(228, 220, 209, 0.897);;
+}

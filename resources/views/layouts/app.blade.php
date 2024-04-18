@@ -10,11 +10,14 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-
+    <style>body{visibility: hidden}</style>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    {{-- icona  --}}
+    <link rel="icon" href="{{asset('deliveboo.png')}}">
+    {{-- font awesome --}}
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css' integrity='sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==' crossorigin='anonymous'/>
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
 </head>
@@ -25,7 +28,7 @@
 
         @include('includes.header')
 
-        <main class="">
+        <main class="container">
 
             {{-- alert  --}}
             @include('includes.alert')
@@ -36,7 +39,7 @@
 
     {{-- script per l'alert che sparisce da solo --}}
     @session('message')
-        @vite('resources/js/close_alerts.js')
+        @vite('resources/js/close_alert.js')
     @endsession
 </body>
 
