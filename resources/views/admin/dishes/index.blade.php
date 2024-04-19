@@ -106,15 +106,3 @@
         @endif
     </div>
 @endsection
-@section('scripts')
-
-    {{-- <script>
-        const toggleVisibleForms = document.querySelectionAll('.visible-form');
-
-        toggleVisibleForms.forEach(form => {
-            form.addEventListener('click', e => {
-                form.submit();
-            })
-        })
-    </script> --}}
-@endsection
