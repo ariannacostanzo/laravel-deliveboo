@@ -12,6 +12,7 @@ export default defineConfig({
                 "resources/js/close_alert.js",
                 "resources/js/preview_img.js",
                 "resources/js/modal.js",
+                "resources/js/image_modal.js",
             ],
             refresh: true,
         }),
