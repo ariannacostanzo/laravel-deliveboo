@@ -4,6 +4,7 @@
 
 @section('content')
 @include('includes.modal')
+
     <header>
         <h1 class="text-center my-4">Piatti</h1>
     </header>
@@ -15,10 +16,18 @@
                 <input type="search" class="form-control" placeholder="Cerca..." name="search" value="{{ $search }}"
                     autofocus>
                 <div class="input-group-append">
-                    <button class="btn btn-outline-primary">Cerca</button>
+                    <button class="btn cm-btn-primary">Cerca</button>
                 </div>
             </div>
         </form>
+    </div>
+
+    {{-- modale immagine  --}}
+    <div id="image-modal-container" class="d-none">
+        <button type="button" class="btn cm-btn-primary"><i class="fa-solid fa-xmark"></i></button>
+        <figure>
+            <img src="" id="modal-image" alt="">
+        </figure>
     </div>
 
     <table class="table table-striped container">
@@ -54,9 +63,12 @@
                         @endif
                     </td>
                     <td>{{ $dish->price }} €</td>
-                    <td> <img class="image-small"
-                            src="{{ $dish->image ? $dish->image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg' }}"
-                            alt="{{ $dish->name }}"> </td>
+                    <td> 
+                        <img class="image-small image-modal" 
+                        src="{{ $dish->image ? $dish->image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg' }}"
+                        alt="{{ $dish->name }}">
+                    
+                             </td>
                     <td>
                         <form action="{{ route('admin.dishes.visible', $dish->id) }}" method="POST" class="visible-form"
                             onclick="this.submit()">
@@ -113,4 +125,5 @@
 
 @section('scripts')
    @vite('resources/js/modal.js') 
+   @vite('resources/js/image_modal.js') 
 @endsection

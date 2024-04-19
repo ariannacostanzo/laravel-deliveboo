@@ -887,21 +887,21 @@ class DishSeeder extends Seeder
                 'name' => 'Birra Heineken',
                 'ingredients' => null,
                 'price' => 3.50,
-                'restaurant_id' => 3,
+                'restaurant_id' => 6,
                 'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
             ],
             [
                 'name' => 'Acqua naturale 50cl',
                 'ingredients' => null,
                 'price' => 1.00,
-                'restaurant_id' => 3,
+                'restaurant_id' => 6,
                 'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
             ],
             [
                 'name' => 'Acqua frizzante 50cl',
                 'ingredients' => null,
                 'price' => 1.00,
-                'restaurant_id' => 3,
+                'restaurant_id' => 6,
                 'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
             ],
         ];
