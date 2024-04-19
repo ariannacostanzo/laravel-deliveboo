@@ -16,13 +16,31 @@ body {
     font-family: 'More Sugar Thin';
 }
 
-// header 
-.my-header {
+//utils
+
+.cm-btn-primary {
     background-color: #f48c06;
-    box-shadow: 0 0 5px black;
-    font-family: 'More Sugar';
-    font-size: 18px;
+    border: 1px solid #f48c06;
+
+    &:hover {
+        background-color: #e48304;
+    }
 }
+
+.show {
+    display: block;
+}
+
+.cm-btn-secondary {
+    background-color: #00a082;
+    border: 1px solid #00a082;
+
+    &:hover {
+        background-color: #018a71;
+    }
+}
+
+//generics
 
 h1{
     font-family: 'More Sugar';
@@ -31,6 +49,19 @@ h1{
 th {
     font-family: 'More Sugar Thin';
     font-size: 18px;
+}
+
+// header 
+.my-header {
+    background-color: #f48c06;
+    box-shadow: 0 0 5px black;
+    font-family: 'More Sugar';
+    font-size: 18px;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
 }
 
 .dropdown-menu {
@@ -44,6 +75,7 @@ th {
     object-position: center;
     width: 60px;
     height: 40px;
+    border-radius: 5px;
 }
 
 .image-large-container {
@@ -59,10 +91,6 @@ th {
     width: 100px;
 }
 
-.show {
-    display: block;
-}
-
 // radio button 
 
 .form-check-input:checked {
@@ -73,5 +101,36 @@ th {
 .form-check-input:focus {
     border-color: #f48c06;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(228, 220, 209, 0.897);;
+    box-shadow: 0 0 0 0.25rem rgba(228, 220, 209, 0.897);
 }
+
+//img preview
+
+.image-placeholder {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+//pagination
+
+.page-link {
+    color:#f48c06;
+
+    &:hover {
+        color: #834b03;
+    }
+
+    &:focus{
+        box-shadow: 0 0 0 0.25rem rgba(228, 220, 209, 0.897);
+        color: #834b03;
+    }
+}
+.page-link.active, .active > .page-link {
+    color: var(--bs-pagination-active-color);
+    background-color: #f48c06;
+    border-color: #c97405;
+}
+

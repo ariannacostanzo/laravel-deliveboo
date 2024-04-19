@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DishController as AdminDishController;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,8 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
+    // $user_id = Auth::id();
+    // $user = User::whereId($user_id)->get();
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
