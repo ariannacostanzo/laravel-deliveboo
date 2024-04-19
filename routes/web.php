@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DishController as AdminDishController;
+use App\Models\Restaurant;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RestaurantController;
@@ -21,9 +22,10 @@ use App\Http\Controllers\RestaurantController;
 Route::get('/', [RestaurantController::class, 'show']);
 
 Route::get('/dashboard', function () {
-    // $user_id = Auth::id();
-    // $user = User::whereId($user_id)->get();
-    return view('dashboard');
+    $user_id = Auth::id();
+    $user = User::find($user_id);
+    $restaurant = $user->restaurant()->first();
+    return view('dashboard', compact('user', 'restaurant'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
