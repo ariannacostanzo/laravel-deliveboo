@@ -12,12 +12,15 @@ class DishController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $search = $request->query('search');
+
         $user_id = Auth::id();
         // $dishes = Dish::whereRestaurantId($user_id)->orderBy('name')->orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10);
-        $dishes = Dish::orderByDesc('name')->orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10);
-        return view('admin.dishes.index', compact('dishes'));
+        $dishes = Dish::where('name', 'LIKE', "%$search%")->orderByDesc('name')->orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10)->withQueryString();
+        return view('admin.dishes.index', compact('dishes', 'search'));
     }
 
     /**
@@ -54,7 +57,7 @@ class DishController extends Controller
         $dish->restaurant_id = $user_id;
         $dish->fill($data);
         $dish->save();
-       
+
 
 
         return to_route('admin.dishes.show', $dish->id)->with('message', "Il piatto $dish->name è stato creato con successo");
