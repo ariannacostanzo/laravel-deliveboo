@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="d-flex justify-content-between">
-                    <a href="{{ route('admin.dishes.index', $dish) }}" class="card-link btn cm-btn-primary">Torna alla
+                    <a href="{{ route('admin.dishes.index', $dish) }}" class="card-link btn btn-secondary"><i class="fa-solid fa-left-long me-2"></i>Torna alla
                         lista</a>
                     <div class="d-flex gap-3">
                         <a class="btn btn-warning" href="{{ route('admin.dishes.edit', $dish) }}"><i

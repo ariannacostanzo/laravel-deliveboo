@@ -2,10 +2,10 @@
 @section('content')
 
 <header>
-    <h1 class="text-center my-5">Modifica un piatto</h1>
+    <h1 class="text-center mt-5">Modifica un piatto</h1>
 </header>
 <main>
-    <div class="container py-5">
+    <div class="container py-3">
         <form action="{{route('admin.dishes.update', $dish->id)}}" method="POST">
             @csrf
             @method('PATCH')
@@ -80,7 +80,7 @@
             </div>
             <div class="d-flex justify-content-between align-items-center container">
                 <div class="my-5">
-                    <a href="{{ route('admin.dishes.index')}}" class="btn btn-secondary"><i class="me-2"></i>Torna indietro</a>
+                    <a href="{{ route('admin.dishes.index')}}" class="btn btn-secondary"><i class="fa-solid fa-left-long me-2"></i>Torna indietro</a>
                 </div>
                 <div class="my-5">
                     <button class="btn btn-warning"><i class="fas fa-pencil me-2"></i>Modifica</button>

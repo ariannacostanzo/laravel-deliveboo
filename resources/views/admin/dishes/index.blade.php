@@ -7,7 +7,7 @@
     <header>
         <h1 class="text-center my-4">Piatti</h1>
     </header>
-    <table class="table table-striped container">
+    <table class="table table-striped table-hover container">
         <thead>
             <tr>
                 <th scope="col">Nome</th>
@@ -57,7 +57,7 @@
                     <td>{{ $dish->getFormattedDate($dish->updated_at) }}</td>
                     <td>
                         <div class="d-flex justify-content-end gap-2">
-                            <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-sm btn-primary"><i
+                            <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-sm cm-btn-secondary"><i
                                     class="fas fa-eye"></i></a>
 
                             <a href="{{ route('admin.dishes.edit', $dish) }}" class="btn btn-sm btn-warning"> <i

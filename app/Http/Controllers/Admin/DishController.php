@@ -57,7 +57,7 @@ class DishController extends Controller
        
 
 
-        return to_route('admin.dishes.show', $dish->id)->with('message', "$dish->name creato con successo")->with('type', 'success');
+        return to_route('admin.dishes.show', $dish->id)->with('message', "Il piatto $dish->name è stato creato con successo");
     }
 
     /**
@@ -99,7 +99,7 @@ class DishController extends Controller
         $data = $request->all();
         $dish->update($data);
 
-        return to_route('admin.dishes.index', $dish->id)->with('message', "$dish->name modificato con successo")->with('type', 'info');
+        return to_route('admin.dishes.index', $dish->id)->with('message', "Il piatto $dish->name è stato modificato con successo");
     }
 
     /**
@@ -108,7 +108,7 @@ class DishController extends Controller
     public function destroy(Dish $dish)
     {
         $dish->delete();
-        return to_route('admin.dishes.index')->with('message', "Il piatto $dish->name è stato eliminato con successo")->with('type', 'danger');;
+        return to_route('admin.dishes.index')->with('message', "Il piatto $dish->name è stato eliminato con successo");
     }
 
 
@@ -123,6 +123,6 @@ class DishController extends Controller
         $type = $dish->is_visible ? 'info' : 'info';
 
 
-        return back()->with('message', "Il piatto $dish->name è $action")->with('type', $type);
+        return back()->with('message', "Il piatto $dish->name è $action");
     }
 }

@@ -31,6 +31,14 @@ body {
     display: block;
 }
 
+.cm-btn-secondary {
+    background-color: #00a082;
+    border: 1px solid #00a082;
+
+    &:hover {
+        background-color: #018a71;
+    }
+}
 
 //generics
 
@@ -49,6 +57,11 @@ th {
     box-shadow: 0 0 5px black;
     font-family: 'More Sugar';
     font-size: 18px;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
 }
 
 .dropdown-menu {
@@ -62,6 +75,7 @@ th {
     object-position: center;
     width: 60px;
     height: 40px;
+    border-radius: 5px;
 }
 
 .image-large-container {
@@ -87,7 +101,7 @@ th {
 .form-check-input:focus {
     border-color: #f48c06;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(228, 220, 209, 0.897);;
+    box-shadow: 0 0 0 0.25rem rgba(228, 220, 209, 0.897);
 }
 
 //img preview
@@ -106,6 +120,11 @@ th {
     color:#f48c06;
 
     &:hover {
+        color: #834b03;
+    }
+
+    &:focus{
+        box-shadow: 0 0 0 0.25rem rgba(228, 220, 209, 0.897);
         color: #834b03;
     }
 }
