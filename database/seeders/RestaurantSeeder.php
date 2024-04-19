@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Restaurant;
+use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -59,6 +60,8 @@ class RestaurantSeeder extends Seeder
             
         ];
 
+        $types = Type::all();
+
         foreach($restaurants as $res)
         {
             $new_res = new Restaurant();
@@ -66,8 +69,11 @@ class RestaurantSeeder extends Seeder
             $new_res->save();
 
         }
+        foreach($types as $type){
+            $new_res->types()->attach($type->id);
+        }
 
 
         
     }
-}
+};
