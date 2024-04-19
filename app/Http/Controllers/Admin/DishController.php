@@ -16,10 +16,9 @@ class DishController extends Controller
     {
 
         $search = $request->query('search');
-
         $user_id = Auth::id();
         // $dishes = Dish::whereRestaurantId($user_id)->orderBy('name')->orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10);
-        $dishes = Dish::where('name', 'LIKE', "%$search%")->orderByDesc('name')->orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10)->withQueryString();
+        $dishes = Dish::whereRestaurantId($user_id)->where('name', 'LIKE', "%$search%")->orderBy('name')->orderByDesc('updated_at')->orderByDesc('created_at')->paginate(10)->withQueryString();
         return view('admin.dishes.index', compact('dishes', 'search'));
     }
 

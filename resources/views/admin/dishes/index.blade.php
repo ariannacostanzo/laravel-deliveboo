@@ -15,7 +15,7 @@
                 <input type="search" class="form-control" placeholder="Cerca..." name="search" value="{{ $search }}"
                     autofocus>
                 <div class="input-group-append">
-                    <button class="btn btn-outline-primary">Cerca</button>
+                    <button class="btn cm-btn-primary">Cerca</button>
                 </div>
             </div>
         </form>
