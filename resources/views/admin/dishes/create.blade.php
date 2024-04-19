@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <header>
-    <h1 class="text-center my-5">Aggiungi un nuovo piatto</h1>
+    <h1 class="text-center mt-5 mb-1">Aggiungi un nuovo piatto</h1>
 </header>
 <main>
     <div class="container py-5">
