@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="jumbotron p-5 mb-4 rounded-3">
+    <div class="jumbotron p-5 mb-4 rounded-3 container">
         <h3 class="text-center">Altri partner che hanno collaborato con noi:</h3>
         <div class="row pt-3">
             @foreach ($restaurants as $restaurant)
@@ -24,4 +24,17 @@
             @endforeach
         </div>
     </div>
+    <div>
+      <div class="dashboard-footer">
+        <div class="container-sm py-2">
+          <p class="my-3"> <strong>Indirizzo:</strong> {{$restaurant->address}}</p>
+          <p class="m-0"><strong>Partita IVA: </strong>{{$restaurant->vat_number}}</p>
+        </div>
+      
+    </div>
+      
+      
+    </div>
+   
 @endsection
+
