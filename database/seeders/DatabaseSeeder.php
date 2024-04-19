@@ -20,8 +20,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
+        $this->call(TypeSeeder::class);
         $this->call(RestaurantSeeder::class);
         $this->call(DishSeeder::class);
+        
         // \App\Models\Dish::factory(30)->create();
     }
 }
