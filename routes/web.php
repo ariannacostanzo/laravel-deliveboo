@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DishController as AdminDishController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\RestaurantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [RestaurantController::class, 'show']);
 
 Route::get('/dashboard', function () {
     // $user_id = Auth::id();
@@ -41,5 +40,4 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('/dishes', AdminDishController::class);
 });
-
 require __DIR__ . '/auth.php';
