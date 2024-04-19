@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if(isset($restaurant->name))
+    
+
+
 <div class="container">
     <h2 class="fs-4 text-secondary my-4">
         {{ __('Dashboard') }}
@@ -24,4 +29,11 @@
         </div>
     </div>
 </div>
+@else
+
+<p>form registrazione ristorante</p>
+
+@endif
+
+
 @endsection
