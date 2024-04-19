@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Restaurant;
+use App\Models\Type;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('restaurant_type', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('restaurant_id')->constrained()->onDelete('cascade');
-            $table->foreignId('type_id')->constrained()->onDelete('cascade');
-            $table->timestamps();
+            $table->foreignIdFor(Restaurant::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(Type::class)->constrained()->cascadeOnDelete();
+           // $table->timestamps();
         });
     }
 
