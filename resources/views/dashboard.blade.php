@@ -31,7 +31,7 @@
 </div>
 @else
 
-<p>form registrazione ristorante</p>
+<h1 class="text-center">form registrazione ristorante</h1>
 
 @endif
 
