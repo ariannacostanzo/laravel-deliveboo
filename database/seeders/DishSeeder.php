@@ -587,7 +587,7 @@ class DishSeeder extends Seeder
                 'ingredients' => 'Manzo, Broccoli, Aglio, Salsa di Soia',
                 'price' => 13.99,
                 'restaurant_id' => 4,
-                'image' => 'https://b2498294.smushcdn.com/2498294/wine-dharma/uploads/2020/10/1914-cucina-cinese-manzo-con-salsa-di-soia-broccoli-e-aglio-e-sesamo.jpg?lossy=2&strip=1&webp=1'
+                'image' => 'https://recipeimages.migros.ch/crop/v-w-1200-h-630-a-center_center/4221f8e76a0b3e5dc928fdecab010f467a0d1839/straccetti-di-manzo-con-broccoli-0-16-9.jpg'
             ],
             [
                 'name' => 'Involtini Primavera',

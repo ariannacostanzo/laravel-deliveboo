@@ -41,6 +41,15 @@ body {
 }
 
 //generics
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
 h1 {
     font-family: 'More Sugar';
@@ -227,3 +236,8 @@ th {
     width: 40px;
 }
 
+//icons footer
+
+.fa-2xl {
+    cursor: pointer;
+}
