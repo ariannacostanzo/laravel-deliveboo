@@ -29,7 +29,7 @@
         @include('includes.header')
     
 
-        <main class="container">
+        <main class="">
 
             {{-- alert  --}}
             @include('includes.alert')
