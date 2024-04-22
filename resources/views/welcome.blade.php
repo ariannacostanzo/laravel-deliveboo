@@ -4,8 +4,8 @@
         <h3 class="text-center">Altri partner che hanno collaborato con noi:</h3>
         <div class="row pt-3">
             @foreach ($restaurants as $restaurant)
-                <div class=" col-lg-4 col-md-6 col-sm-12 pt-3">
-                    <div class="mb-4 shadow py-3">
+                <div class=" col-lg-4 col-md-6 col-sm-12 pt-3 ">
+                    <div class="mb-4 shadow rest-card py-3">
                      <div class="d-flex justify-content-center">
                         @if ($restaurant->image)
                            <figure  class="home-restaurant-img">
@@ -13,20 +13,20 @@
                            </figure>
                         @endif
                       </div>
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                          <div>
+
                             <h5 class="card-title text-center fs-2 py-2">{{ $restaurant->name }}</h5>
                             <p class="card-text text-center">{{ $restaurant->address }}</p>
+                          </div>
+                          <span class="py-2 d-flex align-items-center justify-content-center "> 
                             @forelse ($restaurant->types as $type)
-                            <div class=" d-flex align-items-center justify-content-center "> 
-                              <img class="type-icon me-2" src="{{ $type->icon}}" alt="{{ $type->label }}">
+                              <img class="type-icon mx-2" src="{{ $type->icon}}" alt="{{ $type->label }}">
                               <p class="card-text text-center">{{ $type->label }}</p>
-                            </div>
-                            @empty
-                                
-                            @endforelse
-                            
-
-                            
+                              @empty
+                              
+                              @endforelse
+                          </span>
                         </div>
                     </div>
                 </div>

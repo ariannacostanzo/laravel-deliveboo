@@ -904,6 +904,349 @@ class DishSeeder extends Seeder
                 'restaurant_id' => 6,
                 'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
             ],
+            [
+                'name' => 'Pollo Tikka Masala',
+                'ingredients' => 'Pollo, Pomodoro, Cipolla, Peperoncino, Crema di Cocco, Spezie Varie',
+                'price' => 12.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.indianhealthyrecipes.com/wp-content/uploads/2020/03/badam-milk-2.jpg'
+            ],
+            [
+                'name' => 'Paneer Tikka',
+                'ingredients' => 'Paneer, Pomodoro, Cipolla, Peperoncino, Spezie Varie',
+                'price' => 11.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.cookwithkushi.com/wp-content/uploads/2023/02/tandoori_paneer_tikka_restaurant_style.jpg'
+            ],
+            [
+                'name' => 'Biryani di Verdure',
+                'ingredients' => 'Riso Basmati, Verdure Miste, Spezie Varie',
+                'price' => 9.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.buttalapasta.it/wp-content/uploads/biryani-di-verdure.jpg',
+            ],
+            [
+                'name' => 'Butter Chicken',
+                'ingredients' => 'Pollo, Pomodoro, Burro, Panna, Spezie Varie',
+                'price' => 13.99,
+                'restaurant_id' => 7,
+                'image' => 'https://cafedelites.com/wp-content/uploads/2019/01/Butter-Chicken-IMAGE-64.jpg'
+            ],
+            [
+                'name' => 'Saag Paneer',
+                'ingredients' => 'Paneer, Spinaci, Pomodoro, Cipolla, Spezie Varie',
+                'price' => 10.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.sainsburysmagazine.co.uk/media/7337/download/Saag-Paneer.jpg?v=1'
+            ],
+            [
+                'name' => 'Naan all\'Aglio',
+                'ingredients' => 'Farina, Aglio, Burro',
+                'price' => 3.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.giallozafferano.it/images/201-20127/Naan-all-aglio_780x520_wm.jpg'
+            ],
+            [
+                'name' => 'Mango Lassi',
+                'ingredients' => 'Mango, Yogurt, Zucchero',
+                'price' => 4.99,
+                'restaurant_id' => 7,
+                'image' => 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/6a808bb0-210d-4a71-9bd5-5f602437232f/Derivates/37e049d3-4aec-44fb-a1e4-17c951aa4623.jpg'
+            ],
+            [
+                'name' => 'Pakora di Verdure',
+                'ingredients' => 'Verdure Miste, Farina di Ceci, Spezie Varie',
+                'price' => 7.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.vegolosi.it/wp-content/uploads/2018/06/Pakoras_4936_650.jpg'
+            ],
+            [
+                'name' => 'Raita di Cetrioli',
+                'ingredients' => 'Cetrioli, Yogurt, Spezie Varie',
+                'price' => 2.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.giallozafferano.it/images/30-3009/Raita_780x520_wm.jpg'
+            ],
+            [
+                'name' => 'Gulab Jamun',
+                'ingredients' => 'Latte in Polvere, Farina, Zucchero, Acqua di Rose',
+                'price' => 6.99,
+                'restaurant_id' => 7,
+                'image' => 'https://static01.nyt.com/images/2023/10/19/multimedia/ND-Gulab-Jamun-tqgl/ND-Gulab-Jamun-tqgl-square640.jpg'
+            ],
+            [
+                'name' => 'Masala Chai',
+                'ingredients' => 'Tè Nero, Latte, Spezie Varie',
+                'price' => 3.99,
+                'restaurant_id' => 7,
+                'image' => 'https://primochef.it/wp-content/uploads/2021/05/SH_masala_chai.jpg'
+            ],
+            [
+                'name' => 'Kulfi alla Rosa',
+                'ingredients' => 'Latte, Zucchero, Pistacchi, Acqua di Rose',
+                'price' => 7.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.desiblitz.com/wp-content/uploads/2019/09/7-Delicious-Kulfi-Recipes-to-Make-at-Home-strawberry.jpg'
+            ],
+            [
+                'name' => 'Rasmalai',
+                'ingredients' => 'Latte, Zucchero, Pistacchi, Spezie Varie',
+                'price' => 8.99,
+                'restaurant_id' => 7,
+                'image' => 'https://www.cookwithmanali.com/wp-content/uploads/2014/07/Rasmalai-Recipe.jpg'
+            ],
+            [
+                'name' => 'Big Mac',
+                'ingredients' => 'Pane, Hamburger di Manzo, Insalata, Formaggio, Salsa Speciale, Cipolla',
+                'price' => 5.99,
+                'restaurant_id' => 8,
+                'image' => 'https://www.mcdonalds.it/sites/default/files/styles/compressed/public/products/big-mac-hero-mob.jpg?itok=EE5XBx1F'
+            ],
+            [
+                'name' => 'McChicken',
+                'ingredients' => 'Pane, Petto di Pollo Impanato, Insalata, Maionese',
+                'price' => 4.99,
+                'restaurant_id' => 8,
+                'image' => 'https://www.dissapore.com/wp-content/uploads/2022/08/big-mac-chicken.jpg'
+            ],
+            [
+                'name' => 'McNuggets',
+                'ingredients' => 'Petti di Pollo, Panatura, Salsa Agrodolce',
+                'price' => 6.99,
+                'restaurant_id' => 8,
+                'image' => 'https://www.foodserviceweb.it/wp-content/uploads/sites/4/2018/09/800x596_chickennuggets_20st.jpg'
+            ],
+            [
+                'name' => 'Quarter Pounder with Cheese',
+                'ingredients' => 'Pane, Hamburger di Manzo, Formaggio, Ketchup, Senape',
+                'price' => 5.49,
+                'restaurant_id' => 8,
+                'image' => 'https://s7d1.scene7.com/is/image/mcdonalds/DC_202201_0007-005_QuarterPounderwithCheese_832x472:1-3-product-tile-desktop?wid=765&hei=472&dpr=off'
+            ],
+            [
+                'name' => 'Filet-O-Fish',
+                'ingredients' => 'Pane, Pesce Impanato, Formaggio, Salsa Tartara',
+                'price' => 4.99,
+                'restaurant_id' => 8,
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/f/f7/McDonald%27s_Filet-O-Fish_sandwich_%281%29.jpg'
+            ],
+            [
+                'name' => 'Patatine fritte',
+                'ingredients' => 'Patate, Olio di Semi di Girasole, Sale',
+                'price' => 2.49,
+                'restaurant_id' => 8,
+                'image' => 'https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-fries-medium-6:nutrition-calculator-tile?wid=472&hei=472&dpr=off'
+            ],
+            [
+                'name' => 'McFlurry',
+                'ingredients' => 'Gelato, Topping a Scelta',
+                'price' => 3.99,
+                'restaurant_id' => 8,
+                'image' => 'https://www.mcdonalds.it/sites/default/files/styles/compressed/public/products/750x1100-mcflurry-oreo.jpg?itok=EZNCj6LZ'
+            ],
+            [
+                'name' => 'Big Breakfast',
+                'ingredients' => 'Uova, Pancetta, Salsiccia, Hash Browns, Pancakes, Sciroppo d\'Acero',
+                'price' => 6.99,
+                'restaurant_id' => 8,
+                'image' => 'https://www.the-sun.com/wp-content/uploads/sites/6/2021/01/OFF-PLAT-KE-BREAKFAST.jpg?strip=all&quality=100&w=1500&h=1000&crop=1'
+            ],
+            [
+                'name' => 'Double Cheeseburger',
+                'ingredients' => 'Pane, Doppio Hamburger di Manzo, Formaggio, Ketchup, Sottaceti',
+                'price' => 4.49,
+                'restaurant_id' => 8,
+                'image' =>  'https://www.mcdonalds.it/sites/default/files/styles/compressed/public/products/double-cheeseburger--hero-mob.jpg?itok=h2Sb6fQv'
+            ],
+            [
+                'name' => 'McRib',
+                'ingredients' => 'Pane, Maiale Tritato, Salsa BBQ, Cipolla, Sottaceti',
+                'price' => 5.49,
+                'restaurant_id' => 8,
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/2/27/McD-McRib.jpg'
+            ],
+            [
+                'name' => 'Hash Browns',
+                'ingredients' => 'Patate, Sale, Pepe',
+                'price' => 1.99,
+                'restaurant_id' => 8,
+                'image' => 'https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-Hash-Brown-New:1-3-product-tile-desktop?wid=829&hei=515&dpr=off'
+            ],
+            [
+                'name' => 'Sausage McMuffin',
+                'ingredients' => 'Muffin, Salsiccia, Uovo, Formaggio',
+                'price' => 3.99,
+                'restaurant_id' => 8,
+                'image' => 'https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-Sausage-Egg-McMuffin-2:1-3-product-tile-desktop?wid=829&hei=515&dpr=off'
+            ],
+            [
+                'name' => 'McDouble',
+                'ingredients' => 'Pane, Doppio Hamburger di Manzo, Ketchup, Senape, Cipolla',
+                'price' => 3.49,
+                'restaurant_id' => 8,
+                'image' => 'https://s7d1.scene7.com/is/image/mcdonalds/Header_McDouble_832x472:1-3-product-tile-desktop?wid=763&hei=472&dpr=off'
+            ],
+            [
+                'name' => 'Classic Salmon Poke Bowl',
+                'ingredients' => 'Salmone Fresco, Riso al Gelsomino, Avocado, Edamame, Cetriolo, Alghe Nori, Salsa Ponzu',
+                'price' => 12.99,
+                'restaurant_id' => 9,
+                'image' => 'https://www.savoryexperiments.com/wp-content/uploads/2022/01/Salmon-Poke-Bowl-4.jpg'
+            ],
+            [
+                'name' => 'Spicy Tuna Poke Bowl',
+                'ingredients' => 'Tonno Piccante, Riso al Gelsomino, Avocado, Mais, Cipollotto, Wasabi, Salsa Sriracha',
+                'price' => 11.99,
+                'restaurant_id' => 9,
+                'image' => 'https://www.skinnytaste.com/wp-content/uploads/2019/08/Spicy-Tuna-Poke-Bowls-8.jpg'
+            ],
+            [
+                'name' => 'Hawaiian Poke Bowl',
+                'ingredients' => 'Tonno Giallo, Salmone, Riso al Gelsomino, Ananas, Mango, Peperoncino, Salsa Teriyaki',
+                'price' => 14.99,
+                'restaurant_id' => 9,
+                'image' => 'https://therecipecritic.com/wp-content/uploads/2022/01/hawaiianpokebowls.jpg'
+            ],
+            [
+                'name' => 'Tofu Poke Bowl',
+                'ingredients' => 'Tofu, Riso al Gelsomino, Avocado, Pomodoro, Mais, Cetriolo, Salsa Yuzu',
+                'price' => 10.99,
+                'restaurant_id' => 9,
+                'image' => 'https://www.skinnytaste.com/wp-content/uploads/2023/03/Tofu-Poke-Bowl-8.jpg'
+            ],
+            [
+                'name' => 'California Roll Poke Bowl',
+                'ingredients' => 'Granchio, Avocado, Cetriolo, Riso al Gelsomino, Masago, Salsa Mayo-Sriracha',
+                'price' => 13.49,
+                'restaurant_id' => 9,
+                'image' => 'https://www.cookingclassy.com/wp-content/uploads/2022/08/california-roll-sushi-bowls-3.jpg'
+            ],
+            [
+                'name' => 'Salmon Avocado Poke Bowl',
+                'ingredients' => 'Salmone Fresco, Avocado, Riso al Gelsomino, Edamame, Cetriolo, Alga Wakame, Salsa Soia',
+                'price' => 12.99,
+                'restaurant_id' => 9,
+                'image' => 'https://images.eatsmarter.com/sites/default/files/styles/max_size/public/salmon-poke-bowl-with-avocado-664909.jpg'
+            ],
+            [
+                'name' => 'Spicy Salmon Poke Bowl',
+                'ingredients' => 'Salmone Piccante, Riso al Gelsomino, Avocado, Mango, Mais, Cetriolo, Salsa Teriyaki',
+                'price' => 12.99,
+                'restaurant_id' => 9,
+                'image' => 'https://farahjeats.com/wp-content/uploads/2022/01/IMG_0060_jpg-1024x1024.jpg'
+            ],
+            [
+                'name' => 'Vegetarian Poke Bowl',
+                'ingredients' => 'Tofu, Riso al Gelsomino, Avocado, Peperoni, Mais, Carote, Salsa di Sesamo',
+                'price' => 10.99,
+                'restaurant_id' => 9,
+                'image' => 'https://www.noracooks.com/wp-content/uploads/2022/06/vegan-poke-bowl-6.jpg'
+            ],
+            [
+                'name' => 'Spicy Shrimp Poke Bowl',
+                'ingredients' => 'Gamberetti Piccanti, Riso al Gelsomino, Avocado, Mango, Cetriolo, Mais, Salsa Sriracha',
+                'price' => 13.49,
+                'restaurant_id' => 9,
+                'image' => 'https://www.whollytasteful.com/wp-content/uploads/2022/02/shrimp-poke-bowl-featured.jpg'
+            ],
+            [
+                'name' => 'Whopper',
+                'ingredients' => 'Hamburger di Manzo, Pomodoro, Lattuga, Cipolla, Formaggio, Salsa di Maionese',
+                'price' => 5.99,
+                'restaurant_id' => 10,
+                'image' => 'https://www.greenme.it/wp-content/uploads/2023/09/whopper-burger-king.jpg'
+            ],
+            [
+                'name' => 'Big King XXL',
+                'ingredients' => 'Hamburger di Manzo, Bacon, Formaggio, Lattuga, Cipolla, Salsa di Maionese',
+                'price' => 7.49,
+                'restaurant_id' => 10,
+                'image' => 'https://www.bidibee.com/file/5f76037f10000025eeb0c8b5/MARKETS/5f76044f1000002beeb0c8b6/ITEMS/5f92f7761000004e166402fa/medium_9BLolTC5Mzj6C6F.jpg'
+            ],
+            [
+                'name' => 'Cheeseburger',
+                'ingredients' => 'Hamburger di Manzo, Formaggio, Ketchup, Senape, Sottaceti, Cipolla',
+                'price' => 3.49,
+                'restaurant_id' => 10,
+                'image' => 'https://burgerking.com.cy/sites/default/files/Cheeseburger-01_2.png'
+            ],
+            [
+                'name' => 'Chicken Nugget',
+                'ingredients' => 'Pollo Impanato, Salsa di Maionese, Salsa Barbecue',
+                'price' => 4.99,
+                'restaurant_id' => 10,
+                'image' => 'https://burgerking.com.my/upload/image/Product/21/Nuggets%206pcs.png'
+            ],
+            [
+                'name' => 'BK Veggie Burger',
+                'ingredients' => 'Hamburger Vegetale, Pomodoro, Lattuga, Cipolla, Ketchup, Senape',
+                'price' => 4.99,
+                'restaurant_id' => 10,
+                'image' => 'https://funnyvegan.com/wp-content/uploads/2021/03/Funny-Vegan-news-plant-based-Whooper.png'
+            ],
+            [
+                'name' => 'Chicken Royale',
+                'ingredients' => 'Petto di Pollo alla Griglia, Pomodoro, Lattuga, Formaggio, Salsa di Maionese',
+                'price' => 6.49,
+                'restaurant_id' => 10,
+                'image' => 'https://s3-eu-central-1.amazonaws.com/www.burger-king.ng/wp-media-folder-burger-king-nigeria//home/ubuntu/wordpress/web/app/uploads/sites/12/2021/09/original-chicken-1.jpg'
+            ],
+            [
+                'name' => 'Double Whopper',
+                'ingredients' => 'Doppio Hamburger di Manzo, Formaggio, Lattuga, Cipolla, Salsa di Maionese',
+                'price' => 8.99,
+                'restaurant_id' => 10,
+                'image' => 'https://cms.burgerking.be/uploads/medium_DOUBLE_WHOPPER_CHEESE_FV_V1_min_33fd13abe8.png'
+            ],
+            [
+                'name' => 'Bacon King',
+                'ingredients' => 'Hamburger di Manzo, Bacon, Formaggio, Lattuga, Cipolla, Salsa di Maionese',
+                'price' => 6.99,
+                'restaurant_id' => 10,
+                'image' => 'https://www.burgerking.it/assets/img/console/mo/products/580image_sito_slide_it.png?v=1709568750'
+            ],
+            [
+                'name' => 'Chicken Fries',
+                'ingredients' => 'Bastoncini di Pollo Impanato, Salsa di Maionese, Ketchup',
+                'price' => 4.49,
+                'restaurant_id' => 10,
+                'image' => 'https://www.allrecipes.com/thmb/hjmgYEDrk96JhI3HLU9UJsoS6C4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7972088-Copycat-Burger-King-Chicken-Fries-ddmfs-4x3-165-f344109ed24944fc89677aaaae31dc7d.jpg'
+            ],
+            [
+                'name' => 'BK Fusion',
+                'ingredients' => 'Hamburger di Manzo, Pane al Sesamo, Formaggio, Salsa di Maionese, Cipolla, Pomodoro',
+                'price' => 5.99,
+                'restaurant_id' => 10,
+                'image' => 'https://cdn.innaturale.com/uploads/2023/05/Veggie-Steakhouse-Burger-King.webp'
+            ],
+            [
+                'name' => 'Crispy Chicken Wrap',
+                'ingredients' => 'Pollo Croccante, Lattuga, Pomodoro, Formaggio, Salsa di Maionese',
+                'price' => 4.99,
+                'restaurant_id' => 10,
+                'image' => 'https://burgerking.com.mt/wp-content/uploads/2020/03/13.ChickenWrap.png'
+            ],
+            [
+                'name' => 'Double Cheeseburger',
+                'ingredients' => 'Doppio Hamburger di Manzo, Doppio Formaggio, Ketchup, Senape, Sottaceti',
+                'price' => 5.99,
+                'restaurant_id' => 10,
+                'image' => 'https://burgerking.com.my/upload/image/Product/56/Cheeseburger%20%28Double%29%20Ala%20Carte.png'
+            ],
+            [
+                'name' => 'BBQ Bacon Double Cheeseburger',
+                'ingredients' => 'Doppio Hamburger di Manzo, Doppio Bacon, Doppio Formaggio, Salsa Barbecue',
+                'price' => 7.99,
+                'restaurant_id' => 10,
+                'image' => 'https://burgerking.com.my/upload/image/Product/14/BBQ%20Beefacon%20%28Double%29%20Ala%20Carte.png'
+            ],
+            [
+                'name' => 'Long Chicken',
+                'ingredients' => 'Petto di Pollo alla Griglia, Lattuga, Pomodoro, Formaggio, Salsa di Maionese',
+                'price' => 5.99,
+                'restaurant_id' => 10,
+                'image' => 'https://burgerking.com.my/upload/image/Product/2/Long%20Chicken.png'
+            ],
         ];
 
         foreach($dishes as $dish)
