@@ -29,13 +29,17 @@
         @include('includes.header')
     
 
-        <main class="">
+        <main>
+            <div class="container">
 
-            {{-- alert  --}}
-            @include('includes.alert')
+                {{-- alert  --}}
+                @include('includes.alert')
+            </div>
 
             @yield('content')
         </main>
+
+
     </div>
 
     @yield('scripts')

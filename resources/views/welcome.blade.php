@@ -16,7 +16,16 @@
                         <div class="card-body">
                             <h5 class="card-title text-center fs-2 py-2">{{ $restaurant->name }}</h5>
                             <p class="card-text text-center">{{ $restaurant->address }}</p>
-                            <p class="card-text text-center">{{ $restaurant->vat_number }}</p>
+                            @forelse ($restaurant->types as $type)
+                            <div class=" d-flex align-items-center justify-content-center "> 
+                              <img class="type-icon me-2" src="{{ $type->icon}}" alt="{{ $type->label }}">
+                              <p class="card-text text-center">{{ $type->label }}</p>
+                            </div>
+                            @empty
+                                
+                            @endforelse
+                            
+
                             
                         </div>
                     </div>
@@ -28,7 +37,7 @@
       <div class="dashboard-footer">
         <div class="container-sm py-2">
           <p class="my-3"> <strong>Indirizzo:</strong> {{$restaurant->address}}</p>
-          <p class="m-0"><strong>Partita IVA: </strong>{{$restaurant->vat_number}}</p>
+          <p class="mb-2"><strong>Partita IVA: </strong>{{$restaurant->vat_number}}</p>
         </div>
       
     </div>
