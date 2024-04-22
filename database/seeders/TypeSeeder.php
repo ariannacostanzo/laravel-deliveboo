@@ -18,27 +18,43 @@ class TypeSeeder extends Seeder
         $types = [
             [
                 'label' => 'Sushi',
-                'icon' => 'https://img.freepik.com/premium-vector/sushi-with-chopstick-cartoon-icon-illustration-japanese-food-icon-concept-isolated-flat-cartoon-style_138676-1723.jpg',
+                'icon' => 'https://static.vecteezy.com/system/resources/previews/024/399/413/original/sushi-japanese-food-clip-art-element-transparent-background-png.png',
             ],
             [
                 'label' => 'Griglieria',
-                'icon' => 'https://macelleriabelli.it/wp-content/uploads/2020/07/Belli_shop1926.jpg',
+                'icon' => 'https://cdn-icons-png.freepik.com/256/12694/12694445.png',
             ],
             [
                 'label' => 'Pizza',
-                'icon' => 'https://static.vecteezy.com/ti/vettori-gratis/p3/26783111-carino-pizza-logo-portafortuna-vettore-icona-illustrazione-cibo-cartone-animato-piatto-stile-adatto-per-ristorante-vettoriale.jpg',
+                'icon' => 'https://images.freeimages.com/image/previews/78c/cheesy-slice-png-food-icon-5692718.png',
             ],
             [
                 'label' => 'Cinese',
-                'icon' => 'https://st3.depositphotos.com/8950810/31734/v/950/depositphotos_317342607-stock-illustration-cute-ramen-bowl-isolated-on.jpg',
+                'icon' => 'https://cdn.icon-icons.com/icons2/677/PNG/512/chinese-food_icon-icons.com_60866.png',
             ],
             [
                 'label' => 'Italiano',
-                'icon' => 'https://img.freepik.com/premium-vector/italian-food-logo-name-icon-symbol-vector-italy_526280-402.jpg',
+                'icon' => 'https://icons.iconarchive.com/icons/icons-land/3d-food/256/Dish-Pasta-Spaghetti-icon.png',
             ], 
             [
                 'label' => 'Kebab',
-                'icon' => 'https://static.vecteezy.com/ti/vettori-gratis/p3/21523821-illustrazione-vettore-grafico-di-kebab-duro-falafel-turco-cibo-cibo-avvolgere-icona-gratuito-vettoriale.jpg',
+                'icon' => 'https://cdn-icons-png.flaticon.com/512/7499/7499501.png',
+            ],
+            [
+                'label' => 'Indiano',
+                'icon' => 'https://cdn2.iconfinder.com/data/icons/food-items-4/131/73-512.png',
+            ],
+            [
+                'label' => 'Fast Food',
+                'icon' => 'https://cdn.icon-icons.com/icons2/1954/PNG/512/potatoes_122714.png',
+            ],
+            [
+                'label' => 'Poké',
+                'icon' => 'https://cdn-icons-png.flaticon.com/512/7688/7688721.png',
+            ],
+            [
+                'label' => 'Hamburger',
+                'icon' => 'https://cdn3.iconfinder.com/data/icons/food-flat-21/100/food-08-512.png',
             ],
            
         ];

@@ -4,7 +4,9 @@
 
 @section('content')
 @include('includes.modal')
+    <div class="container">
 
+    
     <header>
         <h1 class="text-center my-4">Piatti</h1>
     </header>
@@ -29,17 +31,20 @@
             <img src="" id="modal-image" alt="">
         </figure>
     </div>
+<div class="table-responsive ">
 
-    <table class="table table-striped container">
+
+    <table class="table table-striped ">
         <thead>
             <tr>
                 <th scope="col">Nome</th>
-                <th scope="col">Ingredienti</th>
+                <th scope="col" class="d-none d-md-table-cell">Ingredienti</th>
                 <th scope="col">Prezzo</th>
-                <th scope="col">Immagine</th>
+                <th scope="col" class="d-none d-md-table-cell">Immagine</th>
                 <th scope="col">Visibile</th>
-                <th scope="col">Creata il</th>
-                <th scope="col">Modificata il</th>
+                
+                {{-- <th scope="col" class="">Creata il</th>
+                <th scope="col" class="">Modificata il</th> --}}
                 <th>
                     <div class="d-flex justify-content-end">
                         <a href="{{ route('admin.dishes.create') }}" class="btn btn-sm cm-btn-primary"><i
@@ -55,7 +60,7 @@
                     <td>
                         {{ $dish->name }}
                     </td>
-                    <td>
+                    <td class="d-none d-md-table-cell">
                         @if ($dish->ingredients)
                             {{ $dish->getAbstract() }}
                         @else
@@ -63,7 +68,7 @@
                         @endif
                     </td>
                     <td>{{ $dish->price }} €</td>
-                    <td> 
+                    <td class="d-none d-md-table-cell"> 
                         <img class="image-small image-modal" 
                         src="{{ $dish->image ? $dish->image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg' }}"
                         alt="{{ $dish->name }}">
@@ -83,8 +88,8 @@
                             </div>
                         </form>
                     </td>
-                    <td>{{ $dish->getFormattedDate($dish->created_at) }}</td>
-                    <td>{{ $dish->getFormattedDate($dish->updated_at) }}</td>
+                    {{-- <td class="">{{ $dish->getFormattedDate($dish->created_at) }}</td>
+                    <td class="">{{ $dish->getFormattedDate($dish->updated_at) }}</td> --}}
                     <td>
                         <div class="d-flex justify-content-end gap-2">
                             <a href="{{ route('admin.dishes.show', $dish) }}" class="btn btn-sm cm-btn-secondary"><i
@@ -116,10 +121,12 @@
         </tbody>
 
     </table>
-    <div class="container py-3">
+    </div>
+    <div class="py-3">
         @if ($dishes->hasPages())
             {{ $dishes->links() }}
         @endif
+    </div>
     </div>
 @endsection
 

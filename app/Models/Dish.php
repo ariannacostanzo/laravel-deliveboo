@@ -10,7 +10,7 @@ class Dish extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name','price','image','is_visible'];
+    protected $fillable = ['name','price','image','is_visible', 'ingredients'];
 
     public function restaurant()
     {
@@ -18,8 +18,8 @@ class Dish extends Model
     }
 
     public function getAbstract() {
-        $abstract = substr($this->ingredients, 0, 40) . '...';
-        if(strlen($this->ingredients) > 40) {
+        $abstract = substr($this->ingredients, 0, 60) . '...';
+        if(strlen($this->ingredients) > 60) {
             return $abstract;
         } else {
             return $this->ingredients;

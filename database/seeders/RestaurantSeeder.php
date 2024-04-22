@@ -57,22 +57,52 @@ class RestaurantSeeder extends Seeder
                 'image' => 'https://www.bellacarne.it/wp-content/uploads/2021/03/kebab-ricetta-originale.jpg',
                 'user_id' => 6
             ],
+            [
+                'name' => 'Indian Curry Restaurant',
+                'address' => 'via del Toscano 5, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520515',
+                'image' => 'https://www.archetravel.com/wp-content/uploads/2023/08/00.india-cosa-mangiare_fb.jpg',
+                'user_id' => 7
+            ],
+            [
+                'name' => 'McDonald\'s',
+                'address' => 'Piazza Stesicoro 57, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520510',
+                'image' => 'https://img.grouponcdn.com/deal/22sh6xDHFowtfZ3XwHPu4YK3NBx1/22-1500x900/v1/t600x362.jpg',
+                'user_id' => 8
+            ],
+            [
+                'name' => 'Honolulu Poke',
+                'address' => 'viale dei Martiri 86, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520525',
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1200,h_630,d_it:cuisines:poke-7.jpg/v1/it/restaurants/249337.jpg',
+                'user_id' => 9
+            ],
+            [
+                'name' => 'Burger King',
+                'address' => 'piazza Cronato 5, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520536',
+                'image' => 'https://static.alfonsino.cloud/uploads/products/298/PveF3OKOJi1pLVRMRk0pybgOkw8fupSlDtzXVARX.jpeg',
+                'user_id' => 10
+            ],
             
         ];
 
         $types = Type::all();
-
+        $index = 0;
         foreach($restaurants as $res)
         {
             $new_res = new Restaurant();
             $new_res->fill($res);
             $new_res->save();
 
-        }
-        foreach($types as $type){
-            $new_res->types()->attach($type->id);
-        }
+            $type = $types[$index];
+            // echo 'Index: ' . $index . ', Type ID: ' . $types[$index]->id . '<br>';
+            $new_res->types()->attach($type);
+            $index++;
+        } 
 
+        
 
         
     }

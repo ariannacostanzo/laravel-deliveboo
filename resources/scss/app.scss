@@ -41,6 +41,15 @@ body {
 }
 
 //generics
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
 h1 {
     font-family: 'More Sugar';
@@ -175,7 +184,7 @@ th {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,8 +212,12 @@ th {
 }
 .dashboard-footer {
     background-color: #f48c06;
-    color: white;
+    color: black;
 
+}
+
+.rest-card {
+    height: 460px;
 }
 
 .home-restaurant-img {
@@ -213,6 +226,18 @@ th {
 
     img {
         width: 100%;
+        object-fit: cover;
         height: 250px;
     }
+}
+
+//type
+.type-icon {
+    width: 40px;
+}
+
+//icons footer
+
+.fa-2xl {
+    cursor: pointer;
 }
