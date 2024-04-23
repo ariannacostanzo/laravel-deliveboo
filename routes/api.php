@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\RestaurantController;
+use App\Http\Controllers\Api\TypeController;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +20,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+//api per i ristoranti
+
+Route::get('/restaurants', [RestaurantController::class, 'index']);
+
+
+//api per i tipi
+
+Route::get('/types', [TypeController::class, 'index']);
