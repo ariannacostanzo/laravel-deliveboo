@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Restaurant extends Model
 {
+
+    protected $fillable = [
+        'user_id',
+        'name',
+        'address',
+        'vat_number',
+        'image'
+    ];
     use HasFactory;
 
     public function user()
