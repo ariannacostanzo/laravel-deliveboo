@@ -44,7 +44,7 @@ class DishController extends Controller
         ], [
             'name' => 'Nessun nome inserito',
             'ingredients' => 'Gli ingredienti devono essere una stringa',
-            'price' => 'Il prezzo deve essere un numero decimale',
+            'price' => 'Il prezzo deve essere un numero positivo',
             'is_visible' => 'Il valore inserito non è valido',
             'image' => 'Il testo inserito non è un immagine',
 
@@ -67,6 +67,12 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
+        if ($dish->restaurant->user_id !== Auth::id()) {
+            return to_route('admin.dishes.index')
+                ->with('message', "Non sei autorizzato a vedere questo piatto")
+                ->with('type', 'danger');
+        }
+
         return view('admin.dishes.show', compact('dish'));
     }
 
@@ -75,6 +81,12 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
+
+        if ($dish->restaurant->user_id !== Auth::id()) {
+            return to_route('admin.dishes.index')
+                ->with('message', "Non sei autorizzato a vedere questo piatto")
+                ->with('type', 'danger');
+        }
         return view('admin.dishes.edit', compact('dish'));
     }
 
@@ -92,7 +104,7 @@ class DishController extends Controller
         ], [
             'name' => 'Nessun nome inserito',
             'ingredients' => 'Gli ingredienti devono essere una stringa',
-            'price' => 'Il prezzo deve essere un numero decimale',
+            'price' => 'Il prezzo deve essere un numero positivo',
             'is_visible' => 'Il valore inserito non è valido',
             'image' => 'Il testo inserito non è un immagine',
 
