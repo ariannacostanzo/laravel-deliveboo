@@ -21,12 +21,12 @@ class RestaurantController extends Controller
         $request->validate([
             'restaurant_name' => 'required|string',
             'address' => 'nullable|string',
-            'vat_number' => 'required|numeric|min:13|max:13',
+            'vat_number' => 'required|string|min:13|max:13',
             'image' => 'nullable|string|url',
         ], [
             'restaurant_name' => 'Nessun nome inserito',
             'address' => 'Indirizzo non valido',
-            'vat_number' => 'Il numero unserito deve essere di 13 cifre',
+            'vat_number' => 'La partita IVA devve essere di 13 cifre',
             'image' => 'Il testo inserito non è un immagine',
 
         ]);

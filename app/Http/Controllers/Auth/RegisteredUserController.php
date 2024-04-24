@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'restaurant_name' => ['required', 'string'],
             'address' => ['required', 'string'],
-            'vat_number' => ['required', 'string', 'unique:restaurants'],
+            'vat_number' => ['required', 'string', 'unique:restaurants','min:13','max:13'],
             'restaurant_types' => ['required', 'array', 'min:1'], //deve esserci almeno una tipologia
             'restaurant_types.*' => ['exists:types,id']
         ]);
