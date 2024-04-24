@@ -39,7 +39,6 @@
                     <img class="icon-small" src="{{ asset('deliveboo.png') }}" alt="icon">
                 </div>
                 <div>
-
                   <p class="text-center">Seguici</p>
                   <ul class="d-flex align-items-center">
                     <li><a href="https://www.facebook.com/" class="btn"><i class="fab fa-facebook fa-2xl"></i></a></li>
@@ -54,7 +53,6 @@
                     <li><a href="https://play.google.com/store/games?hl=it&gl=US" class="btn"><i class="fab fa-google-play fa-2xl"></i></a></li>
                   </ul>
                 </div>
-                
             </div>
 
         </div>
