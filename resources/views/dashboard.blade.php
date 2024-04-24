@@ -6,7 +6,6 @@
     </h2>
     <div class="row justify-content-center">
         <div class="fs-3 text-center">Benvenuto {{$user->name}}, queste sono le informazioni del tuo ristorante:</div>
-
         @if (session('status'))
             <div class="alert alert-success" role="alert">
                 {{ session('status') }}

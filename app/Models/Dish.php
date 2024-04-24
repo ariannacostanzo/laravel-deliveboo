@@ -17,6 +17,11 @@ class Dish extends Model
         return $this->belongsTo(Restaurant::class);
     }
 
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
+
     public function getAbstract() {
         $abstract = substr($this->ingredients, 0, 60) . '...';
         if(strlen($this->ingredients) > 60) {
@@ -29,4 +34,6 @@ class Dish extends Model
     public function getFormattedDate($date, $format = 'd-m-Y') {
         return Carbon::create($date)->format($format);
     }
+
+
 }
