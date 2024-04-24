@@ -19,6 +19,7 @@ class OrderFactory extends Factory
      */
     public function definition(): array
     {
+
         return [
             'customer_name' => fake()->firstName(),
             'customer_surname' => fake()->lastName(),
@@ -31,13 +32,11 @@ class OrderFactory extends Factory
 
     public function configure(){
 
-        $random_id = rand(1, Restaurant::count());
-        return $this->afterCreating(function(Order $order) use($random_id) {
-        $dish_ids = Dish::where('restaurant_id', $random_id)->pluck('id')->toArray();
-        $order_dishes = array_filter($dish_ids, fn() => rand(0,1));
-
-        $order->dishes()->attach($order_dishes);
-
+        return $this->afterCreating(function (Order $order) {
+            $restaurant = Restaurant::inRandomOrder()->first();
+            $dish_ids = Dish::where('restaurant_id', $restaurant->id)->pluck('id')->toArray();
+            $order_dishes = array_filter($dish_ids, fn () => rand(0, 1));
+            $order->dishes()->attach($order_dishes);
         });
     }
 }

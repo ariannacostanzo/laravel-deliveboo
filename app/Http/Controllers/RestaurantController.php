@@ -37,8 +37,6 @@ class RestaurantController extends Controller
         $new_res->save();
 
 
-
-        return to_route('admin.resturant.show', $new_res->id)->with('message', "Il ristorante $new_res->name è stato creato con successo");
     }
 
 };

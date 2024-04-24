@@ -30,7 +30,7 @@
 
     </div>
 
-    <div class="dashboard-footer position-absolute bottom-0 start-0 w-100">
+    <div class="dashboard-footer position-fixed start-0 bottom-0 w-100 py-1">
         <div class="container-sm">
             <p class="my-3"> <strong>Indirizzo:</strong> {{ $restaurant->address }}</p>
             <p><strong>Partita IVA: </strong>{{ $restaurant->vat_number }}</p>

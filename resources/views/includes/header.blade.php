@@ -22,6 +22,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/dishes') }}">{{ __('Piatti') }}</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.orders.index') }}">{{ __('Ordini') }}</a>
+                </li>
                 @endauth
             </ul>
 

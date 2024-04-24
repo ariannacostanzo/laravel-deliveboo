@@ -150,6 +150,7 @@ th {
 
 .restaurant-image {
     width: 500px;
+    margin-bottom: 8rem;
 
     img {
         width: 100%;
@@ -240,4 +241,21 @@ th {
 
 .fa-2xl {
     cursor: pointer;
+}
+
+//scrollbar
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f48c06;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:  #c97405;
 }
