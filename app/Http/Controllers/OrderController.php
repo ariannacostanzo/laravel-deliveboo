@@ -18,9 +18,11 @@ class OrderController extends Controller
         $dishes = $restaurant->dishes;
         $dish_Ids = $dishes->pluck('id')->toArray();
 
-        $orders = Order::whereHas('dishes', function ($query) use ($dish_Ids) {
+        $orders = Order::with('dishes')->whereHas('dishes', function ($query) use ($dish_Ids) {
             $query->whereIn('dish_id', $dish_Ids);
-        })->get();
+        })->orderBy('created_at', 'desc')->get();
+
+
         return view('admin.orders.index', compact('orders', 'dishes'));
     }
 
