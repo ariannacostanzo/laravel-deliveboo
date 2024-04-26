@@ -26,7 +26,7 @@ class OrderFactory extends Factory
             'customer_address' => fake()->address(),
             'customer_email' => fake()->email(),
             'customer_phone_number' => fake()->e164PhoneNumber(),
-            'total' => fake()->randomFloat(2, 1, 500),
+            'total' => 0,
         ];
     }
 
@@ -35,8 +35,33 @@ class OrderFactory extends Factory
         return $this->afterCreating(function (Order $order) {
             $restaurant = Restaurant::inRandomOrder()->first();
             $dish_ids = Dish::where('restaurant_id', $restaurant->id)->pluck('id')->toArray();
-            $order_dishes = array_filter($dish_ids, fn () => rand(0, 1));
-            $order->dishes()->attach($order_dishes);
+
+            //setto il 30% di possibilità che un piatto vada nell'ordine
+            $probabilityThreshold = 0.1;
+            $order_dishes = array_filter($dish_ids, function () use ($probabilityThreshold) {
+                return mt_rand() / mt_getrandmax() < $probabilityThreshold;
+            });
+
+            // $order_dishes = array_filter($dish_ids, fn () => rand(0, 1));
+
+            $total = 0;
+
+            foreach ($order_dishes as $dish_id) {
+                //creo una quantità a caso
+                $quantity = rand(1, 5);
+
+                //fetch del piatto
+                $dish = Dish::findOrFail($dish_id);
+
+                //ottengo il prezzo e lo moltiplico per la quantità
+                $price = $dish->price;
+                $subtotal = $price * $quantity;
+                $total += $subtotal;
+                $order->dishes()->attach([$dish_id => ['quantity' => $quantity]]);
+            }
+
+            //faccio un update del totale
+            $order->update(['total' => $total]);
         });
     }
 }

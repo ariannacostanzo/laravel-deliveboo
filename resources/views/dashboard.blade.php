@@ -14,7 +14,7 @@
                 </div>
             @endif
             <div class="pt-3">
-                <div class="pt-3 text-center">
+                <div class="py-3 text-center">
                     <h2>{{ $restaurant->name }}</h2>
                 </div>
 
