@@ -85,7 +85,9 @@ th {
     width: 60px;
     height: 40px;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: -moz-zoom-in; 
+    cursor: -webkit-zoom-in; 
+    cursor: zoom-in;   
 }
 
 .image-large-container {
@@ -203,7 +205,7 @@ th {
     }
 
     figure {
-        width: 500px;
+        width: 500px; 
 
         img {
             width: 100%;
