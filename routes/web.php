@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DishController as AdminDishController;
+use App\Http\Controllers\OrderController;
 use App\Models\Restaurant;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,7 @@ Route::get('/dashboard', function () {
 Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
     Route::patch('/dishes/{dish}/visible', [AdminDishController::class, 'toggleVisible'])->name('dishes.visible');
     Route::resource('/dishes', AdminDishController::class);
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 });
 
 

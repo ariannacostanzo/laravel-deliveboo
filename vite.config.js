@@ -13,6 +13,7 @@ export default defineConfig({
                 "resources/js/preview_img.js",
                 "resources/js/modal.js",
                 "resources/js/image_modal.js",
+                "resources/js/accordion.js",
             ],
             refresh: true,
         }),
