@@ -1247,6 +1247,429 @@ class DishSeeder extends Seeder
                 'restaurant_id' => 10,
                 'image' => 'https://burgerking.com.my/upload/image/Product/2/Long%20Chicken.png'
             ],
+            [
+                'name' => 'Spaghetto alle vongole',
+                'ingredients' => 'Spaghetti, Aglio, Olio, Peperoncino, Vongole, Prezzemolo',
+                'price' => 12.00,
+                'restaurant_id' => 11,
+                'image' => 'https://www.casapappagallo.it/storage/21312/spaghetti-con-le-vongole-%28sito%29.jpg'
+            ],
+            [
+                'name' => 'Spaghetto allo Scoglio',
+                'ingredients' => 'Spaghetti, Aglio, Olio, Peperoncino, Vongole, Cozze, Scampi, Gamberi, Calamari, Prezzemolo',
+                'price' => 15.00,
+                'restaurant_id' => 11,
+                'image' => 'https://www.ricettedalmondo.it/images/foto-ricette/s/113-spaghetti-allo-scoglio-ds.jpg'
+            ],
+            [
+                'name' => 'Risotto crema di Scapi',
+                'ingredients' => 'Riso, Olio, Peperoncino, Scampi, Prezzemolo',
+                'price' => 10.90,
+                'restaurant_id' => 11,
+                'image' => 'https://www.ricetteperbimby.it/foto-ricette/risotto-alla-crema-di-scampi-bimby.jpg'
+            ],
+            [
+                'name' => 'Risotto alla pescatora',
+                'ingredients' => 'Riso, Aglio, Olio, Peperoncino, Vongole, Cozze, Scampi, Gamberi, Calamari, Prezzemolo',
+                'price' => 14.90,
+                'restaurant_id' => 11,
+                'image' => 'https://images.fidhouse.com/fidelitynews/wp-content/uploads/sites/6/2017/11/1511533598_29e26c16cf5ad276642f8cc11d619a992dab41bc-1511461857.jpg?width=1280&height=720&quality=80'
+            ],
+            [
+                'name' => 'Spaghetto al Sugo',
+                'ingredients' => 'Spaghetti, Aglio, Olio, Peperoncino, Basilico',
+                'price' => 9.00,
+                'restaurant_id' => 11,
+                'image' => 'https://www.giallozafferano.it/images/221-22163/Spaghetti-al-pomodoro_650x433_wm.jpg'
+            ],
+            [
+                'name' => 'Orata al forno',
+                'ingredients' => 'Orata, Rosmarino, Olio, Patate',
+                'price' => 20.00,
+                'restaurant_id' => 11,
+                'image' => 'https://www.cucchiaio.it/content/dam/cucchiaio/it/ricette/2022/03/orata-forno-patate/orata-al-forno-con-patate-finale.jpg'
+            ],
+            [
+                'name' => 'Grigliata mista',
+                'ingredients' => 'Calamari, Mazzancolle, Gamberi, Polpo, Scampi',
+                'price' => 25.00,
+                'restaurant_id' => 11,
+                'image' => 'https://grillexperience.it/wp-content/uploads/2023/01/Pesce-alla-Griglia-Post-2.jpg'
+            ],
+            [
+                'name' => 'Calamaro alla griglia',
+                'ingredients' => 'Calamari, Olio, Prezzemolo, Zucchine, Salsa yourt, Menta',
+                'price' => 15.00,
+                'restaurant_id' => 11,
+                'image' => 'https://blog.giallozafferano.it/allacciateilgrembiule/wp-content/uploads/2017/07/calamari-alla-griglia2.jpg'
+            ],
+            [
+                'name' => 'Bistecca alla Fiorentina',
+                'ingredients' => 'Bistecca, Sale',
+                'price' => 45.00,
+                'restaurant_id' => 11,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAi6djmWqdW4lUTFwLqs23uKrDtvegb17mWDrmEKtT9g&s'
+            ],
+            [
+                'name' => 'Carbonara',
+                'ingredients' => 'Spaghetti, Uovo, Pecorino, Guanciale, Pepe',
+                'price' => 11.00,
+                'restaurant_id' => 11,
+                'image' => 'https://www.informacibo.it/wp-content/uploads/2018/04/carbonara.jpg'
+            ],
+            [
+                'name' => 'Bastoncini di pollo croccanti',
+                'ingredients' => 'Pollo, Sale, Uovo, Olio, Prezzemolo',
+                'price' => 13.00,
+                'restaurant_id' => 11,
+                'image' => 'https://blog.giallozafferano.it/inventaricette/wp-content/uploads/2020/08/straccetti-di-pollo-fritti-vid-720x440.jpg'
+            ],
+            [
+                'name' => 'Spaghetti alla Nerano',
+                'ingredients' => 'Spaghetti, Zucchine, olio, Basilico, Provolone del monaco, Basilico',
+                'price' => 11.50,
+                'restaurant_id' => 11,
+                'image' => 'https://www.giallozafferano.it/images/ricette/169/16964/foto_hd/hd650x433_wm.jpg'
+            ],
+            [
+                'name' => 'Birra Heineken',
+                'ingredients' => null,
+                'price' => 3.50,
+                'restaurant_id' => 11,
+                'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 11,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 11,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
+            ],
+            [
+                'name' => 'Vino Pecorino',
+                'ingredients' => null,
+                'price' => 12.50,
+                'restaurant_id' => 11,
+                'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
+            ],
+            [
+                'name' => 'Birra Heineken',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 12,
+                'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 1.50,
+                'restaurant_id' => 12,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 1.50,
+                'restaurant_id' => 12,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
+            ],
+            [
+                'name' => 'Suppli',
+                'ingredients' => 'Riso, Mozzarella, Sugo',
+                'price' => 1.50,
+                'restaurant_id' => 12,
+                'image' => 'https://signorgelo.it/wp-content/uploads/2022/06/Suppli-di-riso-rossi-Grandi.jpg'
+            ],
+            [
+                'name' => 'Fiore di zucca',
+                'ingredients' => 'Fiore di zucca, Mozzarella, Alice',
+                'price' => 2.50,
+                'restaurant_id' => 12,
+                'image' => 'https://cdn.cook.stbm.it/thumbnails/ricette/144/144462/hd750x421.jpg'
+            ],
+            [
+                'name' => 'Crocche di patate',
+                'ingredients' => 'Patate, Uovo, Parmigiano, Mozzarella, Prezzemolo',
+                'price' => 2.00,
+                'restaurant_id' => 12,
+                'image' => 'https://www.moltofood.it/wp-content/uploads/2022/04/Crocche_di_patate_copertina.jpg'
+            ],
+            [
+                'name' => 'Pizza parmigiana',
+                'ingredients' => 'Melanzane, Sugo, Mozzarella, Basilico',
+                'price' => 11.00,
+                'restaurant_id' => 12,
+                'image' => 'https://www.volupizzeria.com/wp-content/uploads/2022/01/Normalissima-1080x675.jpg'
+            ],
+            [
+                'name' => 'Napoli',
+                'ingredients' => 'Pomodoro, Mozzarella, Acciughe, Olive, Capperi',
+                'price' => 10.50,
+                'restaurant_id' => 12,
+                'image' => 'https://www.donnamoderna.com/content/uploads/2021/08/pizza-napoli-830x625.jpg'
+            ],
+            [
+                'name' => 'Vegetariana',
+                'ingredients' => 'Pomodoro, Mozzarella, Verdure Grigliate',
+                'price' => 10.00,
+                'restaurant_id' => 12,
+                'image' => 'https://www.guardini.com/images/guardinispa/ricette/full/pizza_set_2021_full.jpg'
+            ],
+            [
+                'name' => 'Bufalina',
+                'ingredients' => 'Pomodoro, Mozzarella di Bufala, Basilico',
+                'price' => 12.00,
+                'restaurant_id' => 12,
+                'image' => 'https://www.tacoloco.it/wp-content/uploads/2018/01/pizza-bufalina.jpg'
+            ],
+            [
+                'name' => 'Tonno e Cipolla',
+                'ingredients' => 'Pomodoro, Mozzarella, Tonno, Cipolla',
+                'price' => 10.50,
+                'restaurant_id' => 12,
+                'image' => 'https://media-assets.lacucinaitaliana.it/photos/61fbd8df3697f3ffd0cffbc5/3:2/w_1200,h_800,c_limit/pizza-tonno-cipolle-800.jpg'
+            ],
+            [
+                'name' => 'Calzone',
+                'ingredients' => 'Pomodoro, Mozzarella, Prosciutto Cotto, Funghi, Ricotta',
+                'price' => 12.00,
+                'restaurant_id' => 12,
+                'image' => 'https://cdn.ilclubdellericette.it/wp-content/uploads/2019/04/calzone-napoletano-640x480.jpg'
+            ],
+            [
+                'name' => 'Pugliese',
+                'ingredients' => 'Pomodoro, Mozzarella, Cipolla, Olive, Acciughe, Origano',
+                'price' => 10.50,
+                'restaurant_id' => 12,
+                'image' => 'https://www.silviocicchi.com/pizzachef/wp-content/uploads/2015/05/pizza_pugliese-ev-672x372.jpg'
+            ],
+            [
+                'name' => 'Boscaiola',
+                'ingredients' => 'Pomodoro, Mozzarella, Funghi, Salsiccia, Piselli',
+                'price' => 11.00,
+                'restaurant_id' => 12,
+                'image' => 'https://blog.giallozafferano.it/golosipeccati/wp-content/uploads/2015/11/pizza-boscaiola.jpg'
+            ],
+            [
+                'name' => 'Marinara',
+                'ingredients' => 'Pomodoro, Aglio, Origano',
+                'price' => 8.50,
+                'restaurant_id' => 12,
+                'image' => 'https://www.ristorantelespecialita.it/wp-content/uploads/2017/03/Pizza-marinara-ricetta.jpg'
+            ],
+            [
+                'name' => 'Frutti di Mare',
+                'ingredients' => 'Pomodoro, Mozzarella, Frutti di Mare, Aglio, Prezzemolo',
+                'price' => 13.00,
+                'restaurant_id' => 12,
+                'image' => 'https://wips.plug.it/cips/buonissimo.org/cms/2012/05/pizza-ai-frutti-di-mare.jpg'
+            ],
+            [
+                'name' => 'Bianca',
+                'ingredients' => 'Mozzarella, Gorgonzola, Radicchio, Noci',
+                'price' => 11.50,
+                'restaurant_id' => 12,
+                'image' => 'https://blog.giallozafferano.it/dolcesalatoconlucia/wp-content/uploads/2016/10/14725343_10211426845975745_623964806_o.jpg'
+            ],
+            [
+                'name' => 'Rustica',
+                'ingredients' => 'Pomodoro, Mozzarella, Pancetta, Patate, Rosmarino',
+                'price' => 10.50,
+                'restaurant_id' => 12,
+                'image' => 'https://media-cdn.tripadvisor.com/media/photo-s/12/89/2a/a5/pizza-con-patate-porcini.jpg'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 13,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 13,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
+            ],
+            [
+                'name' => 'Vino Pecorino',
+                'ingredients' => null,
+                'price' => 12.50,
+                'restaurant_id' => 13,
+                'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
+            ],
+            [
+                'name' => 'Poke medio',
+                'ingredients' => 'Riso, Salmone, Sesamo, Soia, Avocado, Teryaki, Edamame',
+                'price' => 11.90,
+                'restaurant_id' => 13,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/272077/975d3e886d148d9f1259add158745348'
+            ],
+            [
+                'name' => 'Poke grande',
+                'ingredients' => 'Riso, Salmone, Sesamo, Soia, Avocado, Teryaki, Edamame',
+                'price' => 11.90,
+                'restaurant_id' => 13,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/272077/975d3e886d148d9f1259add158745348'
+            ],
+            [
+                'name' => 'Burrito Salmone',
+                'ingredients' => 'Riso, Salmone, Lattuga, Pomodoro, Philadelphia, Piadina',
+                'price' => 9.00,
+                'restaurant_id' => 13,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/272077/fbf00a74f5843ef3a9ab3f5fddd36f55'
+            ],
+            [
+                'name' => 'Sandwich Salmone',
+                'ingredients' => 'Pane Americano, Philadelphia, Lattuga Romana, Salmone, Avocado',
+                'price' => 7.90,
+                'restaurant_id' => 13,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/272077/8f91e8535e9432c2b76c74fc7c8410ee'
+            ],
+            [
+                'name' => 'Wakame Bowl',
+                'ingredients' => 'Alghe verdi, Sesamo',
+                'price' => 4.50,
+                'restaurant_id' => 13,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/brg_968/f00de048707df6393a61a40e6f89828a'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 14,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 14,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
+            ],
+            [
+                'name' => 'Vino Pecorino',
+                'ingredients' => null,
+                'price' => 12.50,
+                'restaurant_id' => 14,
+                'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
+            ],
+            [
+                'name' => 'Cheeseburger',
+                'ingredients' => 'hamburger di manzo 100% italiano da 120g con doppio cheddar, insalata iceberg, cetriolo, cipolla fresca, pomodoro, salsa barbecue e thousand island',
+                'price' => 10.50,
+                'restaurant_id' => 14,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/brg_american-original-birger/cheeseburger'
+            ],
+            [
+                'name' => 'Chicken Burger',
+                'ingredients' => 'cotoletta di pollo con insalata, pomodoro, ketchup e maionese',
+                'price' => 8.00,
+                'restaurant_id' => 14,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/brg_american-original-birger/chicken-burger'
+            ],
+            [
+                'name' => 'Egg Bacon Cheeseburger',
+                'ingredients' => 'hamburger di manzo 100% italiano da 120g con doppio cheddar, bacon croccante, uovo alla piastra, insalata iceberg, cetriolo, cipolla fresca, pomodoro, salsa barbecue, salsa bacon e thousand island',
+                'price' => 13.50,
+                'restaurant_id' => 14,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/brg_american-original-birger/egg-bacon-cheeseburger'
+            ],
+            [
+                'name' => 'Chorizo Hot Dog',
+                'ingredients' => 'chorizo, jalapeno a fette, cipolla croccante, cetriolini, honey mustard e panna acida',
+                'price' => 14.50,
+                'restaurant_id' => 14,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/brg_american-original-birger/chorizo-hot-dog'
+            ],
+            [
+                'name' => 'Spicy Hot Dog',
+                'ingredients' => 'wurstel fritto, insalata, chili e pico de gallo',
+                'price' => 12.50,
+                'restaurant_id' => 14,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/brg_american-original-birger/spicy-hot-dog'
+            ],
+            [
+                'name' => 'Insalata Primavera',
+                'ingredients' => 'pomodoro, olive nere, insalata iceberg, cetrioli, mais, mozzarella, crostini di pane e honey mustard',
+                'price' => 9.00,
+                'restaurant_id' => 14,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/brg_american-original-birger/insalata-primavera'
+            ],
+            [
+                'name' => 'Muffin Red Velvet',
+                'ingredients' => null,
+                'price' => 6.00,
+                'restaurant_id' => 14,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/brg_american-original-birger/muffin-red-velvet'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 15,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 15,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
+            ],
+            [
+                'name' => 'Vino Pecorino',
+                'ingredients' => null,
+                'price' => 12.50,
+                'restaurant_id' => 15,
+                'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
+            ],
+            [
+                'name' => 'Tonnarelli con Fiori di Zucca e Calamari',
+                'ingredients' => 'Tonnarelli con Fiori di Zucca e Calamari',
+                'price' => 10.00,
+                'restaurant_id' => 15,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/211718/tonnarelli-con-fiori-di-zucca-e-calamari'
+            ],
+            [
+                'name' => 'Mezze Maniche alla Siciliana',
+                'ingredients' => 'Mezze Maniche alla Siciliana con Pesce Spada, Melanzane, Pomodoro Pachino e Ricotta Salata',
+                'price' => 10.00,
+                'restaurant_id' => 15,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/211718/mezze-maniche-alla-siciliana-con-pesce-spada-melan'
+            ],
+            [
+                'name' => 'Mezze Maniche con Fiori di Zucca',
+                'ingredients' => 'Mezze Maniche con Fiori di Zucca, Guanciale, Pomodoro Pachino e Ricotta Salata',
+                'price' => 8.00,
+                'restaurant_id' => 15,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/211718/mezze-maniche-con-fiori-di-zucca-guanciale-pomodor'
+            ],
+            [
+                'name' => 'Tagliata ai Funghi Porcini',
+                'ingredients' => 'Tagliata, Funghi Porcini',
+                'price' => 18.00,
+                'restaurant_id' => 15,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/211718/tagliata-ai-funghi-porcini'
+            ],
+            [
+                'name' => 'Orata con Verdure',
+                'ingredients' => 'Orata, Zucchine, Patate',
+                'price' => 16.00,
+                'restaurant_id' => 15,
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/211718/spigola-o-orata-con-verdure'
+            ],
+          
+          
+          
         ];
 
         foreach($dishes as $dish)
