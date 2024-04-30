@@ -20,7 +20,8 @@
 
                 <div class="d-flex justify-content-center">
                     <figure class="restaurant-image">
-                        <img src="{{ $restaurant->image }}" alt="{{ $restaurant->name }}">
+                        <img src="{{ $restaurant->image ? $restaurant->image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg' }}"
+                                alt="placeholder" id="placeholder-thumb">
                     </figure>
                 </div>
             </div>

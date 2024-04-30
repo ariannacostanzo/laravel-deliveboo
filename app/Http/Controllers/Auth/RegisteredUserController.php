@@ -41,9 +41,9 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'password_confirmation' => ['required', 'same:password', Rules\Password::defaults()],
-            'restaurant_name' => ['required', 'unique:restaurants,restaurant_name', 'string'],
+            'restaurant_name' => ['required', 'string'],
             'address' => ['required', 'string'],
-            'vat_number' => ['required', 'string', 'size:13', 'unique:restaurants,vat'],
+            'vat_number' => ['required', 'string', 'size:13', 'unique:restaurants,vat_number'],
             'restaurant_types' => ['required', 'array', 'min:1'],
             'restaurant_types.*' => ['exists:types,id']
         ],  [
@@ -64,8 +64,7 @@ class RegisteredUserController extends Controller
             'password_confirmation.required' => 'Inserire la password',
             'password_confirmation.min' => 'La password deve avere almeno :min caratteri',
             'password_confirmation.same' => 'Le password non coincidono',
-            'restaurant_name.required' => 'Inserire una ragione sociale',
-            'restaurant_name.unique' => 'Ragione Sociale già associata ad un username',
+            'restaurant_name.required' => 'Inserire il nome del ristorante',
             'address.required' => 'Inserire un indirizzo',
             'vat_number.required' => 'Inserire una partita iva',
             'vat_number.unique' => 'Partita IVA già associata ad un utente',
