@@ -70,9 +70,7 @@ class DishController extends Controller
     public function show(Dish $dish)
     {
         if ($dish->restaurant->user_id !== Auth::id()) {
-            return to_route('admin.dishes.index')
-                ->with('message', "404 Page Not Found !")
-                ->with('type', 'danger');
+            abort(404);
         }
 
         return view('admin.dishes.show', compact('dish'));
@@ -85,9 +83,7 @@ class DishController extends Controller
     {
 
         if ($dish->restaurant->user_id !== Auth::id()) {
-            return to_route('admin.dishes.index')
-                ->with('message', "404 Page Not Found !")
-                ->with('type', 'danger');
+            abort(404);
         }
         return view('admin.dishes.edit', compact('dish'));
     }
