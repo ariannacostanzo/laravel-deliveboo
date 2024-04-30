@@ -7,6 +7,8 @@ use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+use function Ramsey\Uuid\v1;
+
 class RestaurantSeeder extends Seeder
 {
     /**
@@ -85,21 +87,54 @@ class RestaurantSeeder extends Seeder
                 'image' => 'https://static.alfonsino.cloud/uploads/products/298/PveF3OKOJi1pLVRMRk0pybgOkw8fupSlDtzXVARX.jpeg',
                 'user_id' => 10
             ],
+            [
+                'name' => 'Al Terzo',
+                'address' => 'riviera mallozzi 36, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520599',
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjbt5Ia_AePRjxGaJK0bs29sX1id1txgOTMP0gPhWew&s',
+                'user_id' => 11
+            ],
+            [
+                'name' => 'Antiche Ricette Napoletane',
+                'address' => 'via teseo 15, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520514',
+                'image' => 'https://pizzeriamagnifica.com/wp-content/uploads/2020/03/header.png',
+                'user_id' => 12
+            ],
+            [
+                'name' => 'Poketto',
+                'address' => 'viale manzoni 59, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520523',
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1600,h_500,d_it:cuisines:poke-7.jpg/v1/it/restaurants/272077.jpg',
+                'user_id' => 13
+            ],
+            [
+                'name' => 'Royal Burger',
+                'address' => 'Via Marco Decumio 14, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520588',
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1600,h_500,d_it:cuisines:hamburger-4.jpg/v1/it/restaurants/233954.jpg',
+                'user_id' => 14
+            ],
+            [
+                'name' => 'Il Molisano Ristopizza',
+                'address' => 'Via Col Di Lana 144, Lamezia Terme, CZ 88046',
+                'vat_number' => 'IT07643520577',
+                'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,f_auto,q_auto,w_1600,h_500,d_it:cuisines:hamburger-4.jpg/v1/it/restaurants/233954.jpg',
+                'user_id' => 15
+            ],
             
         ];
 
         $types = Type::all();
-        $index = 0;
         foreach($restaurants as $res)
         {
             $new_res = new Restaurant();
             $new_res->fill($res);
             $new_res->save();
 
-            $type = $types[$index];
+            $type = $types[rand(1, 9)];
             // echo 'Index: ' . $index . ', Type ID: ' . $types[$index]->id . '<br>';
             $new_res->types()->attach($type);
-            $index++;
         } 
 
         

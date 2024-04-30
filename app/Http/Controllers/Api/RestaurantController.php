@@ -31,7 +31,7 @@ class RestaurantController extends Controller
     public function show(string $restaurant)
     {
         // Cerco il ristorante
-        $restaurant = Restaurant::find($restaurant);
+        $restaurant = Restaurant::with('types')->with('dishes')->find($restaurant);
         // Se non lo trovo rispondo vuoto o 404
         if (!$restaurant) return response(null, 404);
         // Mando il restaurant in formato Json
