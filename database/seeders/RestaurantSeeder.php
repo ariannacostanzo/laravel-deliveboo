@@ -126,17 +126,15 @@ class RestaurantSeeder extends Seeder
         ];
 
         $types = Type::all();
-        $index = 0;
         foreach($restaurants as $res)
         {
             $new_res = new Restaurant();
             $new_res->fill($res);
             $new_res->save();
 
-            $type = $types[$index];
+            $type = $types[rand(1, 9)];
             // echo 'Index: ' . $index . ', Type ID: ' . $types[$index]->id . '<br>';
             $new_res->types()->attach($type);
-            $index++;
         } 
 
         
