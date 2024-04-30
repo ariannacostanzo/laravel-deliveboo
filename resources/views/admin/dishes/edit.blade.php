@@ -5,7 +5,7 @@
     </header>
     <main>
         <div class="container py-3">
-            <form action="{{ route('admin.dishes.update', $dish->id) }}" method="POST">
+            <form action="{{ route('admin.dishes.update', $dish->id) }}" method="POST" validate>
                 @csrf
                 @method('PATCH')
                 <div class="row align-items-center justify-content-start">
@@ -13,7 +13,7 @@
                         <label for="name" class="form-label">Nome</label>
                         <input dish="text"
                             class="form-control @error('name') is-invalid @elseif(old('name', '')) is-valid  @enderror"
-                            id="name" name="name" value="{{ old('name', $dish->name) }}">
+                            id="name" name="name" value="{{ old('name', $dish->name) }}" required>
                         @error('name')
                             <div class="invalid-feedback"> {{ $message }}</div>
                         @enderror
@@ -31,7 +31,7 @@
                         <label for="price" class="form-label">Prezzo</label>
                         <input dish="price"
                             class="form-control @error('price') is-invalid @elseif(old('price', '')) is-valid  @enderror"
-                            id="price" name="price" value="{{ old('price', $dish->price) }}">
+                            id="price" name="price" value="{{ old('price', $dish->price) }}" required>
                         @error('price')
                             <div class="invalid-feedback"> {{ $message }}</div>
                         @enderror

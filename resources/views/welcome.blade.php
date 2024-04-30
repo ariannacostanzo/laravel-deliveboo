@@ -13,11 +13,11 @@
                 <div class="card my-5 link"> 
                     
                         <p class="login text-center">Accedi al tuo Ristorante</p>
-                        <a href="{{ route('login') }}" class="btn btn-size cm-btn-primary align-self-center">Login</a>
+                        <a href="{{ route('login') }}" class="btn btn-size cm-btn-primary align-self-center">Accedi</a>
                 
                 
                         <p class="login text-center">Registra un nuovo ristorante</p>
-                        <a href="{{ route('register') }}" class="btn btn-size cm-btn-primary align-self-center">Register</a>
+                        <a href="{{ route('register') }}" class="btn btn-size cm-btn-primary align-self-center">Registrati</a>
            
                     </div>
                   </div>

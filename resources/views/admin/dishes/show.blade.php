@@ -15,7 +15,8 @@
                     <p class="card-text my-5">{{ $dish->price }} €</p>
                 </div> 
                     <figure class="image-large-container">
-                        <img class="image-large" src={{ $dish->image }} alt="{{ $dish->name }}" class="img-fluid">
+                        <img src="{{ $dish->image ? $dish->image : 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg' }}"
+                        alt="placeholder" id="placeholder-thumb">
                     </figure>
                 </div>
 

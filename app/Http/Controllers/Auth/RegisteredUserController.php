@@ -36,15 +36,41 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'surname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
+            'name' => ['required', 'string', 'min:5', 'max:50'],
+            'surname' => ['required', 'string', 'min:5', 'max:50'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:users,email'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'password_confirmation' => ['required', 'same:password', Rules\Password::defaults()],
             'restaurant_name' => ['required', 'string'],
             'address' => ['required', 'string'],
-            'vat_number' => ['required', 'string', 'unique:restaurants','min:13','max:13'],
-            'restaurant_types' => ['required', 'array', 'min:1'], //deve esserci almeno una tipologia
+            'vat_number' => ['required', 'string', 'size:13', 'unique:restaurants,vat_number'],
+            'restaurant_types' => ['required', 'array', 'min:1'],
             'restaurant_types.*' => ['exists:types,id']
+        ],  [
+            'name.required' => 'Inserire un nome',
+            'name.min' => 'Minimo :min caratteri',
+            'name.max' => 'Massimo :max caratteri',
+            'surname.required' => 'Inserire un cognome',
+            'surname.min' => 'Minimo :min caratteri',
+            'surname.max' => 'Massimo :max caratteri',
+            'email.required' => 'Inserire un indirizzo e-mail',
+            'email.unique' => 'Indirizzo e-mail già associato ad un username',
+            'email.lowercase' => 'Inserire l\'indirizzo e-mail con caratteri minuscoli',
+            'email.email' => 'Inserire un indirizzo e-mail valido',
+            'email.max' => 'Inserire un indirizzo e-mail valido',
+            'password.required' => 'Inserire una password',
+            'password.confirmed' => 'Le password non coincidono',
+            'password.min' => 'La password deve avere almeno :min caratteri',
+            'password_confirmation.required' => 'Inserire la password',
+            'password_confirmation.min' => 'La password deve avere almeno :min caratteri',
+            'password_confirmation.same' => 'Le password non coincidono',
+            'restaurant_name.required' => 'Inserire il nome del ristorante',
+            'address.required' => 'Inserire un indirizzo',
+            'vat_number.required' => 'Inserire una partita iva',
+            'vat_number.unique' => 'Partita IVA già associata ad un utente',
+            'vat_number.size' => 'La partita IVA deve avere :size caratteri',
+            'restaurant_types.required' => 'ATTENZIONE: Selezionare almeno una tipologia',
+            'restaurant_types.min' => 'Selezionare almeno una tipologia',
         ]);
 
         $user = User::create([
