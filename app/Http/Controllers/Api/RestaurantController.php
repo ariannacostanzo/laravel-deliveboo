@@ -28,9 +28,14 @@ class RestaurantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Restaurant $restaurant)
+    public function show(string $restaurant)
     {
-        //
+        // Cerco il ristorante
+        $restaurant = Restaurant::find($restaurant);
+        // Se non lo trovo rispondo vuoto o 404
+        if (!$restaurant) return response(null, 404);
+        // Mando il restaurant in formato Json
+        return response()->json($restaurant);
     }
 
     /**
