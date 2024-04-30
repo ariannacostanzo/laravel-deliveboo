@@ -10,7 +10,10 @@
                     <h1 class="card-title mb-3">{{ $dish->name }}</h1>
                 </div>
                 <div class="d-flex justify-content-between my-3">
+                <div>
                     <p class="card-text">{{ $dish->ingredients }}</p>
+                    <p class="card-text my-5">{{ $dish->price }} €</p>
+                </div> 
                     <figure class="image-large-container">
                         <img class="image-large" src={{ $dish->image }} alt="{{ $dish->name }}" class="img-fluid">
                     </figure>

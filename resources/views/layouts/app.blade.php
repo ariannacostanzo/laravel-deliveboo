@@ -43,6 +43,7 @@
     </div>
 
     @yield('scripts')
+    @yield('style')
 
     {{-- script per l'alert che sparisce da solo --}}
     @session('message')

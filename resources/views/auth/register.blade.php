@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Registrati') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data"> 
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" novalidate> 
                         @csrf
 
                         {{-- Nome dell'utente--}}
@@ -130,7 +130,7 @@
                             <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Immagine') }}</label>
 
                             <div class="col-md-6">
-                                <input id="image" type="text" class="form-control @error('image') is-invalid @enderror" name="image">
+                                <input id="image" type="text" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}">
 
                                 @error('image')
                                     <span class="invalid-feedback" role="alert">
@@ -151,7 +151,10 @@
                                     <div class="custom-control custom-checkbox" id="{{$type->id}}">
                                         <input name="restaurant_types[]" value="{{$type->id}}" type="checkbox" 
                                             class="checkbox custom-control-input" 
-                                            id="type-{{$type->id}}">
+                                            id="type-{{$type->id}}"
+                                            @if(is_array(old('restaurant_types')) && in_array($type->id, old('restaurant_types')))
+                                                checked
+                                            @endif>
                                         <label class="custom-control-label" for="type-{{$type->id}}">
                                             {{$type->label}}
                                         </label>
@@ -159,6 +162,7 @@
                                 @endforeach                                    
                             </div>
                         </div>
+                        
 
                         <div class="mb-4 row mb-0">
                             <div class="col-md-6 offset-md-4">
