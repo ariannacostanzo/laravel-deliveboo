@@ -13,11 +13,11 @@
                 <div class="card my-5 link"> 
                     
                         <p class="login text-center">Accedi al tuo Ristorante</p>
-                        <a href="http://127.0.0.1:8000/login" class="btn btn-size cm-btn-primary align-self-center">Login</a>
+                        <a href="{{ route('login') }}" class="btn btn-size cm-btn-primary align-self-center">Login</a>
                 
                 
                         <p class="login text-center">Registra un nuovo ristorante</p>
-                        <a href="http://127.0.0.1:8000/register" class="btn btn-size cm-btn-primary align-self-center">Register</a>
+                        <a href="{{ route('register') }}" class="btn btn-size cm-btn-primary align-self-center">Register</a>
            
                     </div>
                   </div>
