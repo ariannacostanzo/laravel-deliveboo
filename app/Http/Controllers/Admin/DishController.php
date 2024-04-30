@@ -71,7 +71,7 @@ class DishController extends Controller
     {
         if ($dish->restaurant->user_id !== Auth::id()) {
             return to_route('admin.dishes.index')
-                ->with('message', "Non sei autorizzato a vedere questo piatto")
+                ->with('message', "404 Page Not Found !")
                 ->with('type', 'danger');
         }
 
@@ -86,7 +86,7 @@ class DishController extends Controller
 
         if ($dish->restaurant->user_id !== Auth::id()) {
             return to_route('admin.dishes.index')
-                ->with('message', "Non sei autorizzato a vedere questo piatto")
+                ->with('message', "404 Page Not Found !")
                 ->with('type', 'danger');
         }
         return view('admin.dishes.edit', compact('dish'));
