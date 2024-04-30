@@ -38,13 +38,15 @@ class DishController extends Controller
         $request->validate([
             'name' => 'required|string',
             'ingredients' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
+            'price' => 'required|decimal:2|min:0.01',
             'is_visible' => 'required|boolean',
             'image' => 'nullable|string|url',
         ], [
-            'name' => 'Nessun nome inserito',
+            'name.required' => 'Nessun nome inserito',
             'ingredients' => 'Gli ingredienti devono essere una stringa',
-            'price' => 'Il prezzo deve essere un numero positivo',
+            'price.required' => 'Il piatto deve avere un prezzo',
+            'price.decimal' => 'Il prezzo deve avere :decimal decimali',
+            'price.min' => 'Il prezzo deve essere maggiore di 0€',
             'is_visible' => 'Il valore inserito non è valido',
             'image' => 'Il testo inserito non è un immagine',
 
@@ -98,13 +100,15 @@ class DishController extends Controller
         $request->validate([
             'name' => 'required|string',
             'ingredients' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
+            'price' => 'required|decimal:2|min:0.01',
             'is_visible' => 'required|boolean',
             'image' => 'nullable|string|url',
         ], [
-            'name' => 'Nessun nome inserito',
+            'name.required' => 'Nessun nome inserito',
             'ingredients' => 'Gli ingredienti devono essere una stringa',
-            'price' => 'Il prezzo deve essere un numero positivo',
+            'price.required' => 'Il piatto deve avere un prezzo',
+            'price.decimal' => 'Il prezzo deve avere :decimal decimali',
+            'price.min' => 'Il prezzo deve essere diverso da 0€',
             'is_visible' => 'Il valore inserito non è valido',
             'image' => 'Il testo inserito non è un immagine',
 

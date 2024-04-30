@@ -5,12 +5,12 @@
 </header>
 <main>
     <div class="container py-5">
-        <form action="{{route('admin.dishes.store')}}" method="POST">
+        <form action="{{route('admin.dishes.store')}}" method="POST" validate>
             @csrf
             <div class="row align-items-center justify-content-start">
                 <div class="col-6 py-3">
                     <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control @error('name') is-invalid @elseif(old('name', '')) is-valid  @enderror" id="name" name="name" placeholder="Piatto..." value="{{ old('name') }}">
+                    <input type="text" class="form-control @error('name') is-invalid @elseif(old('name', '')) is-valid  @enderror" id="name" name="name" placeholder="Piatto..." value="{{ old('name') }}" required>
                     @error ('name') <div class="invalid-feedback"> {{$message}}</div> @enderror
                 </div>
                 <div class="col-12 py-3">
@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-3 py-3">
                     <label for="price" class="form-label">Prezzo</label>
-                    <input type="number" step=".01" class="form-control @error('price') is-invalid @elseif(old('price', '')) is-valid  @enderror" id="price" name="price" value="{{ old('price') }}" placeholder="6.50">
+                    <input type="number" step=".01" class="form-control @error('price') is-invalid @elseif(old('price', '')) is-valid  @enderror" id="price" name="price" value="{{ old('price') }}" placeholder="6.50" required>
                     @error ('price') <div class="invalid-feedback"> {{$message}}</div> @enderror
                 </div>
                 <div class="col-4 py-3">
