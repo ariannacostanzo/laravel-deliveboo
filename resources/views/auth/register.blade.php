@@ -86,7 +86,7 @@
                             <div class="col-md-6">
                                 <input id="restaurant_name" type="text" class="form-control @error('restaurant_name') is-invalid @enderror" name="restaurant_name" value="{{ old('restaurant_name') }}" required autocomplete="restaurant_name">
 
-                                @error('activity_name')
+                                @error('restaurant_name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -150,7 +150,7 @@
                                 @foreach ($types as $type)
                                     <div class="custom-control custom-checkbox" id="{{$type->id}}">
                                         <input name="restaurant_types[]" value="{{$type->id}}" type="checkbox" 
-                                            class="checkbox custom-control-input" 
+                                            class="checkbox custom-control-input " 
                                             id="type-{{$type->id}}"
                                             @if(is_array(old('restaurant_types')) && in_array($type->id, old('restaurant_types')))
                                                 checked
@@ -158,8 +158,12 @@
                                         <label class="custom-control-label" for="type-{{$type->id}}">
                                             {{$type->label}}
                                         </label>
+                                        
                                     </div>
-                                @endforeach                                    
+                                @endforeach
+                                @error('restaurant_types')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror                                    
                             </div>
                         </div>
                         

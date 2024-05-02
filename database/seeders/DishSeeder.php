@@ -342,7 +342,7 @@ class DishSeeder extends Seeder
                 'ingredients' => null,
                 'price' => 1.50,
                 'restaurant_id' => 2,
-                'image' => 'https://www.drinkupservice.it/content/images/thumbs/0002168_lete-lt-1-pet.png'
+                'image' => 'https://www.montebellobevande.it/191-large_default/acqua-lete-effervescente-naturale-da-1-l-12-bottiglie-in-vetro-a-rendere.jpg'
             ],
             [
                 'name' => 'Caffè',
@@ -1666,6 +1666,76 @@ class DishSeeder extends Seeder
                 'price' => 16.00,
                 'restaurant_id' => 15,
                 'image' => 'https://just-eat-prod-eu-res.cloudinary.com/image/upload/c_fill,q_auto,f_auto,h_450,w_600,dpr_1.0/v1/it/dishes/211718/spigola-o-orata-con-verdure'
+            ],
+            [
+                'name' => 'Margherita',
+                'ingredients' => 'Pomodoro, Mozzarella, Basilico',
+                'price' => 7.00,
+                'restaurant_id' => 15,
+                'image' => 'https://primochef.it/wp-content/uploads/2019/08/SH_pizza_fatta_in_casa-1200x800.jpg.webp'
+            ],
+            [
+                'name' => 'Quattro Stagioni',
+                'ingredients' => 'Pomodoro, Mozzarella, Funghi, Prosciutto Cotto, Carciofi, Olive',
+                'price' => 10.00,
+                'restaurant_id' => 15,
+                'image' => 'https://cdn.cook.stbm.it/thumbnails/ricette/144/144880/hd750x421.jpg'
+            ],
+            [
+                'name' => 'Capricciosa',
+                'ingredients' => 'Pomodoro, Mozzarella, Prosciutto Cotto, Funghi, Carciofi, Olive',
+                'price' => 7.50,
+                'restaurant_id' => 15,
+                'image' => 'https://www.italianstylecooking.net/wp-content/uploads/2022/01/Pizza-capricciosa.jpg'
+            ],
+            [
+                'name' => 'Prosciutto e Funghi',
+                'ingredients' => 'Pomodoro, Mozzarella, Prosciutto Cotto, Funghi',
+                'price' => 7.50,
+                'restaurant_id' => 15,
+                'image' => 'https://redketchup.it/wp-content/uploads/2024/03/pizza-con-prosciutto-e-funghi.webp'
+            ],
+            [
+                'name' => 'Diavola',
+                'ingredients' => 'Pomodoro, Mozzarella, Salame Piccante',
+                'price' => 8.00,
+                'restaurant_id' => 15,
+                'image' => 'https://wips.plug.it/cips/buonissimo.org/cms/2023/02/pizza-alla-diavola.jpg'
+            ],
+            [
+                'name' => 'Quattro Formaggi',
+                'ingredients' => 'Mozzarella, Gorgonzola, Fontina, Parmigiano',
+                'price' => 8.50,
+                'restaurant_id' => 15,
+                'image' => 'https://cdn.ilclubdellericette.it/wp-content/uploads/2020/04/pizza-ai-quattro-formaggi-fatta-in-casa-1280x720.jpg'
+            ],
+            [
+                'name' => 'Napoli',
+                'ingredients' => 'Pomodoro, Mozzarella, Acciughe, Olive, Capperi',
+                'price' => 9.50,
+                'restaurant_id' => 15,
+                'image' => 'https://wips.plug.it/cips/buonissimo.org/cms/2019/04/pizza-napoli.jpg?w=713&a=c&h=407'
+            ],
+            [
+                'name' => 'Vegetariana',
+                'ingredients' => 'Pomodoro, Mozzarella, Verdure Grigliate',
+                'price' => 8.50,
+                'restaurant_id' => 15,
+                'image' => 'https://www.fruttaweb.com/consigli/wp-content/uploads/2018/06/pizza-vegana.jpg'
+            ],
+            [
+                'name' => 'Bufala',
+                'ingredients' => 'Pomodoro, Mozzarella di Bufala, Basilico',
+                'price' => 11.50,
+                'restaurant_id' => 15,
+                'image' => 'https://www.pizzaeother.it/wp-content/uploads/2020/04/bufalina.jpg'
+            ],
+            [
+                'name' => 'Tonno e Cipolla',
+                'ingredients' => 'Pomodoro, Mozzarella, Tonno, Cipolla',
+                'price' => 8.50,
+                'restaurant_id' => 15,
+                'image' => 'https://blog.giallozafferano.it/cucinoperpassione/wp-content/uploads/2019/09/Pizza-rossa-tonno-e-cipolla.jpg'
             ],
           
           
