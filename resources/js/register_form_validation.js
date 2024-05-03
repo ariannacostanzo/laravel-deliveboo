@@ -1,180 +1,269 @@
+//form
+const form = document.getElementById("registration-form");
 
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
+    const result = validateForm();
+    if (result) {
+        form.submit();
+    } else {
+        return;
+    }
+});
+
+const wrongValue = (input, error, text, isValid) => {
+    input.classList.add("is-invalid");
+    error.innerText = text;
+    isValid = false;
+};
+
+const resetError = (input, error) => {
+    error.innerText = '';
+    input.classList.remove('is-invalid')
+}
+
+const validateForm = () => {
+    let isValid = true;
+
+    //! validazione "Nome Ristoratore"
+    const nameValue = document.getElementById("name").value.trim();
+    const nameInput = document.getElementById("name");
+    const nameError = document.getElementById("name-error");
+
+    resetError(nameInput, nameError)
+
+    if (nameValue === "") {
+        wrongValue(
+            nameInput,
+            nameError,
+            "Il nome ristoratore è obbligatorio.",
+            isValid
+        );
+    } else if (nameValue.length < 3) {
+        wrongValue(
+            nameInput,
+            nameError,
+            "Il nome ristoratore deve essere lungo almeno 3 caratteri.",
+            isValid
+        );
+    } else if (!/^[a-zA-Z\s]*$/.test(nameValue)) {
+        wrongValue(
+            nameInput,
+            nameError,
+            "Il nome ristoratore deve contenere solo lettere e spazi.",
+            isValid
+        );
+    }
+
+    //! validazione "Cognome Ristoratore"
+    const surnameValue = document.getElementById("surname").value.trim();
+    const surnameInput = document.getElementById("surname");
+    const surnameError = document.getElementById("surname-error");
+
+    resetError(surnameInput, surnameError);
     
 
-    // Seleziona il pulsante di invio del form
-    const submitButton = document.getElementById('registration-form');
-
-    // Aggiungi l'event listener per il clic sul pulsante di invio
-    submitButton.addEventListener('submit', function(event) {
-        // Previeni il comportamento predefinito del form (l'invio)
-        event.preventDefault();
-
-        const result = validateForm();
-        // Esegui la validazione del form
-       if(result) {
-        submitButton.submit()
-       }else{
-        return
-       }
-    });
-
-
-
-function validateForm() {
-        // Esegui la validazione
-        let isValid = true;
-    // Recupera il valore del campo "Nome Ristoratore"
-    const name = document.getElementById('name').value.trim();
-    const nameError = document.getElementById('name-error');
-    
-    if (name === '') {
-        document.getElementById('name').classList.add('is-invalid');
-        document.getElementById('name-error').innerHTML = 'Il nome ristoratore è obbligatorio.';
-        isValid = false;
-    } else if (name.length < 3) {
-        document.getElementById('name').classList.add('is-invalid');
-        document.getElementById('name-error').innerHTML = 'Il nome ristoratore deve essere lungo almeno 3 caratteri.';
-        isValid = false;
-    } else if (!/^[a-zA-Z\s]*$/.test(name)) {
-        name.classList.add('is-invalid');
-        document.getElementById('name-error').innerHTML = 'Il nome ristoratore deve contenere solo lettere e spazi.';
-        isValid = false;
+    if (surnameValue === "") {
+        wrongValue(
+            surnameInput,
+            surnameError,
+            "Il cognome ristoratore è obbligatorio.",
+            isValid
+        );
+    } else if (surnameValue.length < 3) {
+         wrongValue(
+             surnameInput,
+             surnameError,
+             "Il cognome ristoratore deve essere lungo almeno 3 caratteri.",
+             isValid
+         );
+    } else if (!/^[a-zA-Z\s]*$/.test(surnameValue)) {
+        wrongValue(
+            surnameInput,
+            surnameError,
+            "Il cognome ristoratore deve contenere solo lettere e spazi.",
+            isValid
+        );
+        
     }
 
-    // Recupera il valore del campo "Cognome Ristoratore"
-    const surname = document.getElementById('surname').value.trim();
-
-    if (surname === '') {
-        document.getElementById('surname').classList.add('is-invalid');
-        document.getElementById('surname-error').innerHTML = 'Il cognome ristoratore è obbligatorio.';
-        isValid = false;
-    } else if (surname.length < 3) {
-        document.getElementById('surname').classList.add('is-invalid');
-        document.getElementById('surname-error').innerHTML = 'Il cognome ristoratore deve essere lungo almeno 3 caratteri.';
-        isValid = false;
-    } else if (!/^[a-zA-Z\s]*$/.test(surname)) {
-        document.getElementById('surname').classList.add('is-invalid');
-        document.getElementById('surname-error').innerHTML = 'Il cognome ristoratore deve contenere solo lettere e spazi.';
-        isValid = false;
-    }
-
-
-     // Recupera il valore del campo "Indirizzo Email"
-     let email = document.getElementById('email').value.trim();
-
-     // Resetta gli errori
-     document.getElementById('email').classList.remove('is-invalid');
-     document.getElementById('email-error').innerHTML = '';
-
-  
-     if (email === '') {
-         document.getElementById('email').classList.add('is-invalid');
-         document.getElementById('email-error').innerHTML = 'L\'indirizzo email è obbligatorio.';
-         isValid = false;
-     } else if (!isValidEmail(email)) {
-         document.getElementById('email').classList.add('is-invalid');
-         document.getElementById('email-error').innerHTML = 'L\'indirizzo email non è valido.';
-         isValid = false;
-     }
-     function isValidEmail(email) {
-        // Utilizza un'espressione regolare per validare l'indirizzo email
-        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    let password = document.getElementById('password').value;
-    let confirmPassword = document.getElementById('password-confirm').value;
+    // ! Validazione "Indirizzo Email"
+    const emailValue = document.getElementById("email").value.trim();
+    const emailInput = document.getElementById("email");
+    const emailError = document.getElementById("email-error");
 
     // Resetta gli errori
-    document.getElementById('password').classList.remove('is-invalid');
-    document.getElementById('password-confirm').classList.remove('is-invalid');
-    document.getElementById('password-error').innerHTML = '';
+    resetError(emailInput, emailError);
+    
 
-
-    if (password === '') {
-        document.getElementById('password').classList.add('is-invalid');
-        document.getElementById('password-error').innerHTML = 'La password è obbligatoria.';
-        isValid = false;
-    } else if (password.length < 8) {
-        document.getElementById('password').classList.add('is-invalid');
-        document.getElementById('password-error').innerHTML = 'La password deve contenere almeno 8 caratteri.';
-        isValid = false;
-    } else if (confirmPassword === '') {
-        document.getElementById('password-confirm').classList.add('is-invalid');
-        document.getElementById('password-error').innerHTML = 'Conferma la password.';
-        isValid = false;
-    } else if (password !== confirmPassword) {
-        document.getElementById('password-confirm').classList.add('is-invalid');
-        document.getElementById('password-error').innerHTML = 'Le password non corrispondono.';
-        isValid = false;
+    if (emailValue === "") {
+        
+        wrongValue(
+            emailInput,
+            emailError,
+            "L'indirizzo email è obbligatorio.",
+            isValid
+        );
+    } else if (!isValidemailValue(emailValue)) {
+        wrongValue(
+            emailInput,
+            emailError,
+            "L'indirizzo email non è valido.",
+            isValid
+        );
+    }
+    function isValidemailValue(emailValue) {
+        // Utilizza un'espressione regolare per validare l'indirizzo email
+        let emailValueRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailValueRegex.test(emailValue);
     }
 
+    //!Validazione "password" e "conferma password"
+    const passwordValue = document.getElementById("password").value.trim();
+    const passwordInput = document.getElementById("password");
+    const passwordError = document.getElementById("password-error");
 
-     // Recupera il valore del campo "Nome del ristorante"
-     let restaurantName = document.getElementById('restaurant_name').value.trim();
+    const passwordConfirmValue = document
+        .getElementById("password-confirm")
+        .value.trim();
+    const passwordConfirmInput = document.getElementById("password-confirm");
+    const passwordConfirmError = document.getElementById(
+        "password-confirm-error"
+    );
 
-     // Resetta gli errori
-     document.getElementById('restaurant_name').classList.remove('is-invalid');
-     document.getElementById('restaurant_name-error').innerHTML = '';
+    // Resetta gli errori
+    resetError(passwordInput, passwordError);
+    
+    resetError(passwordConfirmInput, passwordConfirmError);
+    
 
-     if (restaurantName === '') {
-         document.getElementById('restaurant_name').classList.add('is-invalid');
-         document.getElementById('restaurant_name-error').innerHTML = 'Il nome del ristorante è obbligatorio.';
-         isValid = false;
-     } else if (restaurantName.length < 3) {
-         document.getElementById('restaurant_name').classList.add('is-invalid');
-         document.getElementById('restaurant_name-error').innerHTML = 'Il nome del ristorante deve essere lungo almeno 3 caratteri.';
-         isValid = false;
-     }
+    if (passwordValue === "") {
+        wrongValue(
+            passwordInput,
+            passwordError,
+            "La password è obbligatoria.",
+            isValid
+        );
+    } else if (passwordValue.length < 8) {
+        wrongValue(
+            passwordInput,
+            passwordError,
+            "La password deve contenere almeno 8 caratteri.",
+            isValid
+        );
+    } else if (passwordConfirmValue === "") {
+        wrongValue(
+            passwordConfirmInput,
+            passwordConfirmError,
+            "Conferma la password",
+            isValid
+        );
+    } else if (passwordValue !== passwordConfirmValue) {
+        wrongValue(
+            passwordInput,
+            passwordError,
+            "Le password non corrispondono.",
+            isValid
+        );
+    }
 
-      // Recupera il valore del campo "Indirizzo dell'attività"
-      let address = document.getElementById('address').value.trim();
+    //! validazione del campo "Nome del ristorante"
+    const restaurantNameValue = document
+        .getElementById("restaurant_name")
+        .value.trim();
+    const restaurantNameInput = document.getElementById("restaurant_name");
+    const restaurantNameError = document.getElementById(
+        "restaurant_name-error"
+    );
 
-      // Resetta gli errori
-      document.getElementById('address').classList.remove('is-invalid');
-      document.getElementById('address-error').innerHTML = '';
+    // Resetta gli errori
+    resetError(restaurantNameInput, restaurantNameError);
+    
 
-      if (address === '') {
-          document.getElementById('address').classList.add('is-invalid');
-          document.getElementById('address-error').innerHTML = "L'indirizzo dell'attività è obbligatorio.";
-          isValid = false;
-      }
+    if (restaurantNameValue === "") {
+        wrongValue(
+            restaurantNameInput,
+            restaurantNameError,
+            "Il nome del ristorante è obbligatorio.",
+            isValid
+        );
+    } else if (restaurantNameValue.length < 3) {
+        wrongValue(
+            restaurantNameInput,
+            restaurantNameError,
+            "Il nome del ristorante deve essere lungo almeno 3 caratteri.",
+            isValid
+        );
+    }
 
-       // Recupera il valore del campo "Partita IVA"
-       let vatNumber = document.getElementById('vat_number').value.trim();
+    // ! validazione del campo "Indirizzo dell'attività"
+    const addressValue = document.getElementById("address").value.trim();
+    const addressInput = document.getElementById("address");
+    const addressError = document.getElementById("address-error");
 
-       // Resetta gli errori
-       document.getElementById('vat_number').classList.remove('is-invalid');
-       document.getElementById('vat_number-error').innerHTML = '';
+    // Resetta gli errori
+    resetError(addressInput, addressError);
+    
 
-       if (vatNumber === '') {
-           document.getElementById('vat_number').classList.add('is-invalid');
-           document.getElementById('vat_number-error').innerHTML = 'La Partita IVA è obbligatoria.';
-           isValid = false;
-       } else if (vatNumber.length !== 11) {
-           document.getElementById('vat_number').classList.add('is-invalid');
-           document.getElementById('vat_number-error').innerHTML = 'La Partita IVA deve contenere 11 cifre.';
-           isValid = false;
-       } else if (!/^\d+$/.test(vatNumber)) {
-           document.getElementById('vat_number').classList.add('is-invalid');
-           document.getElementById('vat_number-error').innerHTML = 'La Partita IVA deve contenere solo cifre.';
-           isValid = false;
-       }
+    if (addressValue === "") {
+        wrongValue(
+            addressInput,
+            addressError,
+            "L'indirizzo dell'attività è obbligatorio.",
+            isValid
+        );
+    } else if (addressValue.length < 5) {
+        wrongValue(
+            addressInput,
+            addressError,
+            "L'indirizzo dell'attività deve essere lungo almeno 5 caratteri",
+            isValid
+        );
+    }
 
-        // Recupera il valore del campo "Immagine"
-        let image = document.getElementById('image').value.trim();
+    // ! validazione del campo "Partita IVA"
+    const vatNumberValue = document.getElementById("vat_number").value.trim();
+    const vatNumberInput = document.getElementById("vat_number");
+    const vatNumberError = document.getElementById("vat_number-error");
 
-        // Resetta gli errori
-        document.getElementById('image').classList.remove('is-invalid');
-        document.getElementById('image-error').innerHTML = '';
+    // Resetta gli errori
+    resetError(vatNumberInput, vatNumberError);
+    
 
-  
-        if (image !== '' && !isValidUrl(image)) {
-            document.getElementById('image').classList.add('is-invalid');
-            document.getElementById('image-error').innerHTML = 'Inserisci un URL valido per l\'immagine.';
-            isValid = false;
-        }
+    if (vatNumberValue === "") {
+        wrongValue(
+            vatNumberInput,
+            vatNumberError,
+            "La Partita IVA è obbligatoria.",
+            isValid
+        );
+    } else if (vatNumberValue.length !== 13) {
+        wrongValue(
+            vatNumberInput,
+            vatNumberError,
+            "La Partita IVA deve avere 13 caratteri",
+            isValid
+        );
+    }
+
+    // ! validazione del campo "Immagine"
+    const imageValue = document.getElementById("image").value.trim();
+    const imageInput = document.getElementById("image");
+    const imageError = document.getElementById("image-error");
+
+    // Resetta gli errori
+    resetError(imageInput, imageError);
+    
+
+    if (imageValue !== "" && !isValidUrl(imageValue)) {
+        wrongValue(
+            imageInput,
+            imageError,
+            "Inserisci un URL valido per l'immagine.",
+            isValid
+        );
+    }
 
     function isValidUrl(url) {
         // Utilizza un'espressione regolare per verificare se l'URL è valido
@@ -182,17 +271,22 @@ function validateForm() {
         return urlRegex.test(url);
     }
 
-      // Recupera il valore del campo "Tipologia/e Ristorante"
-      let restaurantTypes = document.querySelectorAll('input[name="restaurant_types[]"]:checked');
+    // ! validazione del campo "Tipologia/e Ristorante"
+    const restaurantTypeInputs = document.querySelectorAll(
+        'input[name="restaurant_types[]"]:checked'
+    );
+    const restaurantTypeError = document.getElementById(
+        "restaurant_type-error"
+    );
 
-      // Resetta gli errori
-      document.getElementById('restaurant_type-error').innerHTML = '';
+    // Resetta gli errori
+    restaurantTypeError.innerText = "";
 
+    if (restaurantTypeInputs.length === 0) {
+        restaurantTypeError.innerText =
+            "!Seleziona almeno una tipologia di ristorante.";
+        isValid = false;
+    }
 
-      if (restaurantTypes.length === 0) {
-          document.getElementById('restaurant_type-error').innerHTML = 'Seleziona almeno una tipologia di ristorante.';
-          isValid = false;
-      }
-    // Restituisci il risultato della validazione
     return isValid;
-}
+};

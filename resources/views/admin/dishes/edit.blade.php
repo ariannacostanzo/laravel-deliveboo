@@ -5,7 +5,7 @@
     </header>
     <main>
         <div class="container py-3">
-            <form action="{{ route('admin.dishes.update', $dish->id) }}" method="POST" validate>
+            <form action="{{ route('admin.dishes.update', $dish->id) }}" method="POST"  id="edit-form" novalidate>
                 @csrf
                 @method('PATCH')
                 <div class="row align-items-center justify-content-start">
@@ -14,6 +14,7 @@
                         <input dish="text"
                             class="form-control @error('name') is-invalid @elseif(old('name', '')) is-valid  @enderror"
                             id="name" name="name" value="{{ old('name', $dish->name) }}" required>
+                            <div id="name-error" class="text-danger"></div>
                         @error('name')
                             <div class="invalid-feedback"> {{ $message }}</div>
                         @enderror
@@ -23,6 +24,7 @@
                         <input dish="ingredients"
                             class="form-control @error('ingredients') is-invalid @elseif(old('ingredients', '')) is-valid  @enderror"
                             id="ingredients" name="ingredients" value="{{ old('ingredients', $dish->ingredients) }}">
+                            <div id="ingredients-error" class="text-danger"></div>
                         @error('ingredients')
                             <div class="invalid-feedback"> {{ $message }}</div>
                         @enderror
@@ -32,6 +34,7 @@
                         <input dish="price"
                             class="form-control @error('price') is-invalid @elseif(old('price', '')) is-valid  @enderror"
                             id="price" name="price" value="{{ old('price', $dish->price) }}" required>
+                            <div id="price-error" class="text-danger"></div>
                         @error('price')
                             <div class="invalid-feedback"> {{ $message }}</div>
                         @enderror
@@ -82,6 +85,7 @@
                         <input dish="image"
                             class="form-control @error('image') is-invalid @elseif(old('image', '')) is-valid  @enderror"
                             id="image" name="image" value="{{ old('image', $dish->image) }}">
+                            <div id="image-error" class="text-danger"></div>
                         @error('image')
                             <div class="invalid-feedback"> {{ $message }}</div>
                         @enderror
@@ -110,4 +114,5 @@
 
 @section('scripts')
     @vite('resources/js/preview_img.js')
+    @vite('resources/js/edit_form_validation.js')
 @endsection

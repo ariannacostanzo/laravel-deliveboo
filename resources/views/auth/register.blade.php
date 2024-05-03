@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Registrati') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" id="registration-form" action="{{ route('register') }}" enctype="multipart/form-data" validate> 
+                    <form method="POST" id="registration-form" action="{{ route('register') }}" enctype="multipart/form-data" novalidate> 
                         @csrf
 
                         {{-- Nome dell'utente--}}
@@ -34,7 +34,7 @@
                             <div class="col-md-6">
                                 <input id="surname" type="text" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
 
-                                <div id="suname-error" class="text-danger"></div>
+                                <div id="surname-error" class="text-danger"></div>
                                 @error('surname')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -50,7 +50,7 @@
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                <div id="emali-error" class="text-danger"></div>
+                                <div id="email-error" class="text-danger"></div>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -80,7 +80,9 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <div id="password-confirm-error" class="text-danger"></div>
                             </div>
+                            
                         </div>
 
                         {{-- Nome del Risrotante--}}
@@ -192,8 +194,7 @@
 </div>
 @endsection
 
-{{--
+
 @section('scripts')
     @vite('resources/js/register_form_validation.js')
 @endsection
---}}

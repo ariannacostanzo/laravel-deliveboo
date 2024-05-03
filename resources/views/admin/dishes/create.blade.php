@@ -5,22 +5,25 @@
 </header>
 <main>
     <div class="container py-5">
-        <form action="{{route('admin.dishes.store')}}" method="POST" validate>
+        <form action="{{route('admin.dishes.store')}}" method="POST" novalidate id="create-form">
             @csrf
             <div class="row align-items-center justify-content-start">
                 <div class="col-6 py-3">
                     <label for="name" class="form-label">Nome</label>
-                    <input type="text" class="form-control @error('name') is-invalid @elseif(old('name', '')) is-valid  @enderror" id="name" name="name" placeholder="Piatto..." value="{{ old('name') }}" required>
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @elseif(old('name', '')) is-valid  @enderror" id="name" name="name" placeholder="Piatto..." value="{{ old('name') }}" required>
+                    <div id="name-error" class="text-danger"></div>
                     @error ('name') <div class="invalid-feedback"> {{$message}}</div> @enderror
                 </div>
                 <div class="col-12 py-3">
                     <label for="ingredients" class="form-label">Ingredienti</label>
-                    <input type="text" class="form-control @error('ingredients') is-invalid @elseif(old('ingredients', '')) is-valid  @enderror" id="ingredients" name="ingredients" value="{{ old('ingredients') }}" placeholder="Pomodoro, Mozzarella ...">
+                    <input id="ingredients" type="text" class="form-control @error('ingredients') is-invalid @elseif(old('ingredients', '')) is-valid  @enderror" id="ingredients" name="ingredients" value="{{ old('ingredients') }}" placeholder="Pomodoro, Mozzarella ...">
+                    <div id="ingredients-error" class="text-danger"></div>
                     @error ('ingredients') <div class="invalid-feedback"> {{$message}}</div> @enderror
                 </div>
                 <div class="col-3 py-3">
                     <label for="price" class="form-label">Prezzo</label>
-                    <input type="number" step=".01" class="form-control @error('price') is-invalid @elseif(old('price', '')) is-valid  @enderror" id="price" name="price" value="{{ old('price') }}" placeholder="6.50" required>
+                    <input id="price" type="number" step=".01" class="form-control @error('price') is-invalid @elseif(old('price', '')) is-valid  @enderror" id="price" name="price" value="{{ old('price') }}" placeholder="6.50" required>
+                    <div id="price-error" class="text-danger"></div>
                     @error ('price') <div class="invalid-feedback"> {{$message}}</div> @enderror
                 </div>
                 <div class="col-4 py-3">
@@ -51,7 +54,8 @@
                     <div class="col-8">
 
                         <label for="image" class="form-label">Immagine</label>
-                        <input type="text" class="form-control @error('image') is-invalid @elseif(old('image', '')) is-valid  @enderror" id="image" name="image" value="{{ old('image') }}" placeholder="http:// o https://">
+                        <input id="image" type="text" class="form-control @error('image') is-invalid @elseif(old('image', '')) is-valid  @enderror" id="image" name="image" value="{{ old('image') }}" placeholder="http:// o https://">
+                        <div id="image-error" class="text-danger"></div>
                         @error ('image') <div class="invalid-feedback"> {{$message}}</div> @enderror
                     </div>
                     <div class="col-4 ms-3">
@@ -76,4 +80,5 @@
 
 @section('scripts')
     @vite('resources/js/preview_img.js')
+    @vite('resources/js/create_form_validation.js')
 @endsection

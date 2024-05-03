@@ -15,6 +15,8 @@ export default defineConfig({
                 "resources/js/image_modal.js",
                 "resources/js/accordion.js",
                 "resources/js/register_form_validation.js",
+                "resources/js/edit_form_validation.js",
+                "resources/js/create_form_validation.js",
             ],
             refresh: true,
         }),
