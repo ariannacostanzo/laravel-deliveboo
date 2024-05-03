@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DishController as AdminDishController;
+use App\Http\Controllers\BraintreeController;
 use App\Http\Controllers\OrderController;
 use App\Models\Restaurant;
 use App\Models\User;
@@ -19,7 +20,7 @@ use App\Http\Controllers\RestaurantController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/', [BraintreeController::class, 'token']);
 Route::get('/', [RestaurantController::class, 'show']);
 
 Route::get('/dashboard', function () {

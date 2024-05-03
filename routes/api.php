@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypeController;
+use App\Http\Controllers\BraintreeController;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,7 @@ Route::apiResource('/restaurants', RestaurantController::class)->only('index', '
 //api per i tipi
 
 Route::get('/types', [TypeController::class, 'index']);
+
+
+Route::get('/token', [BraintreeController::class, 'token']);
+
