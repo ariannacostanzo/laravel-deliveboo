@@ -27,6 +27,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //Route::get('/restaurants', [RestaurantController::class, 'index']);
 Route::apiResource('/restaurants', RestaurantController::class)->only('index', 'show');
 
+// Nuova route per la ricerca dei ristoranti
+Route::get('/restaurants/search', [RestaurantController::class, 'search']); 
+
 
 //api per i tipi
 
