@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Braintree\Gateway;
 class BraintreeController extends Controller
 {
     public function token(Request $request)
@@ -17,9 +17,27 @@ class BraintreeController extends Controller
         
         $clientToken = $gateway->clientToken()->generate();
 
-       // dd($clientToken);
-        //return view('welcome');
+        //da adattare a vue
+        
+        $clientToken = $gateway->clientToken()->generate();
         return response()->json($clientToken);
-        }
+    
+    }
+
+    //bisogna fare un'altra funzione che registri il nonce del client
+    public function store() {
+    // if ($request->input('nonce') != null) {
+    //     $nonceFromTheClient = $request->input('nonce');
+
+    //     $gateway->transaction()->sale([
+    //         'amount' => '10.00',
+    //         'paymentMethodNonce' => $nonceFromTheClient,
+    //         // 'paymentMethodNonce' => 'test-invalid-nonce' //per fare fallire la transazione
+    //         'options' => [
+    //             'submitForSettlement' => True
+    //         ]
+    //     ]); 
+    // }
+}
 }
 

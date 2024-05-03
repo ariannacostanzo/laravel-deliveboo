@@ -20,7 +20,6 @@ use App\Http\Controllers\RestaurantController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [BraintreeController::class, 'token']);
 Route::get('/', [RestaurantController::class, 'show']);
 
 Route::get('/dashboard', function () {
