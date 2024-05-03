@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Registrati') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" novalidate> 
+                    <form method="POST" id="registration-form" action="{{ route('register') }}" enctype="multipart/form-data" validate> 
                         @csrf
 
                         {{-- Nome dell'utente--}}
@@ -18,6 +18,7 @@
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus >
 
+                                <div id="name-error" class="text-danger"></div>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -33,6 +34,7 @@
                             <div class="col-md-6">
                                 <input id="surname" type="text" class="form-control @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
 
+                                <div id="suname-error" class="text-danger"></div>
                                 @error('surname')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -48,6 +50,7 @@
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
+                                <div id="emali-error" class="text-danger"></div>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -63,6 +66,7 @@
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
+                                <div id="password-error" class="text-danger"></div>
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -86,6 +90,7 @@
                             <div class="col-md-6">
                                 <input id="restaurant_name" type="text" class="form-control @error('restaurant_name') is-invalid @enderror" name="restaurant_name" value="{{ old('restaurant_name') }}" required autocomplete="restaurant_name">
 
+                                <div id="restaurant_name-error" class="text-danger"></div>
                                 @error('restaurant_name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -102,6 +107,7 @@
                             <div class="col-md-6">
                                 <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address">
 
+                                <div id="address-error" class="text-danger"></div>
                                 @error('address')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -117,6 +123,7 @@
                             <div class="col-md-6">
                                 <input id="vat_number" type="text" class="form-control @error('vat_number') is-invalid @enderror" name="vat_number" value="{{ old('vat_number') }}" required autocomplete="vat_number">
 
+                                <div id="vat_number-error" class="text-danger"></div>
                                 @error('vat_number')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -132,6 +139,7 @@
                             <div class="col-md-6">
                                 <input id="image" type="text" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}">
 
+                                <div id="image-error" class="text-danger"></div>
                                 @error('image')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -161,6 +169,7 @@
                                         
                                     </div>
                                 @endforeach
+                                <div id="restaurant_type-error" class="text-danger"></div>
                                 @error('restaurant_types')
                                     <span class="text-danger">{{$message}}</span>
                                 @enderror                                    
@@ -170,7 +179,7 @@
 
                         <div class="mb-4 row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn cm-btn-primary">
+                                <button type="submit"  class="btn cm-btn-primary">
                                     {{ __('Registrati') }}
                                 </button>
                             </div>
@@ -182,3 +191,9 @@
     </div>
 </div>
 @endsection
+
+{{--
+@section('scripts')
+    @vite('resources/js/register_form_validation.js')
+@endsection
+--}}
