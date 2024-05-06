@@ -61,11 +61,11 @@ class RestaurantController extends Controller
     // funzione filtro search
     public function search(Request $request)
     {
-        // Ottieni i parametri di ricerca dal request
+        // Ottieni i parametri di ricerca
         $searchTerm = $request->input('searchTerm');
         $filters = $request->input('filters');
     
-        // Costruisci la query per la ricerca
+        // query per la ricerca
         $query = Restaurant::query()
             ->with('types')
             ->with('dishes')
@@ -73,7 +73,7 @@ class RestaurantController extends Controller
                 $query->where('name', 'like', '%' . $searchTerm . '%');
             })
             ->when($filters, function ($query, $filters) {
-                // Usa i filtri ricevuti per filtrare i ristoranti
+                // filtri  per filtrare i ristoranti
                 $query->whereHas('types', function ($q) use ($filters) {
                     $q->whereIn('label', $filters);
                 });
