@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypeController;
 use App\Http\Controllers\BraintreeController;
+use App\Http\Controllers\OrderController;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -33,7 +34,7 @@ Route::apiResource('/restaurants', RestaurantController::class)->only('index', '
 
 Route::get('/types', [TypeController::class, 'index']);
 
-
+Route::post('/getNewOrder', [OrderController::class, 'store']);
 Route::get('/token', [BraintreeController::class, 'token']);
 Route::post('/get-clientToken', [BraintreeController::class, 'store']);
 
