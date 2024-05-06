@@ -35,4 +35,5 @@ Route::get('/types', [TypeController::class, 'index']);
 
 
 Route::get('/token', [BraintreeController::class, 'token']);
+Route::post('/get-clientToken', [BraintreeController::class, 'store']);
 
