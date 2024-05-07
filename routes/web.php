@@ -8,6 +8,8 @@ use App\Models\Restaurant;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RestaurantController;
+use App\Http\Controllers\GraphsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,8 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group(function () {
     Route::patch('/dishes/{dish}/visible', [AdminDishController::class, 'toggleVisible'])->name('dishes.visible');
     Route::resource('/dishes', AdminDishController::class);
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::get('/orders/{order_id}', [OrderController::class, 'show'])->name('orders.show');
+    Route::get('/graphic', [GraphsController::class, 'graphs'])->name('graphics.graphic');
 });
 
 
@@ -44,4 +48,8 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('/dishes', AdminDishController::class);
 });
+
+
+
+
 require __DIR__ . '/auth.php';

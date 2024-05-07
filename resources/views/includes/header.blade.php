@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.orders.index') }}">{{ __('Ordini') }}</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.graphics.graphic') }}">{{ __('Statistiche') }}</a>
+                </li>
                 @endauth
             </ul>
 

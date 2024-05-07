@@ -26,7 +26,9 @@ class OrderFactory extends Factory
             'customer_address' => fake()->address(),
             'customer_email' => fake()->email(),
             'customer_phone_number' => fake()->e164PhoneNumber(),
-            'total' => 0,
+            'created_at' => fake()->dateTimeBetween('-2year', 'now'),
+            //'total' => 0,
+            'total' => fake()->randomFloat(3, 0, 999),
         ];
     }
 
