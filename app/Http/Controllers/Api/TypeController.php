@@ -11,9 +11,15 @@ class Typecontroller extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $types = Type::all();
+        if ($request->has('searchTerm')) {
+            $searchTerm = $request->input('searchTerm');
+            $types = Type::where('label', 'LIKE', "%$searchTerm%")->get();
+        } else {
+            $types = Type::all();
+        }
+
         return response()->json($types);
     }
 
