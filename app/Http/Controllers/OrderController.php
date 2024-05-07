@@ -21,7 +21,7 @@ class OrderController extends Controller
 
         $orders = Order::with('dishes')->whereHas('dishes', function ($query) use ($dish_Ids) {
             $query->whereIn('dish_id', $dish_Ids);
-        })->orderBy('created_at', 'desc')->get();
+        })->orderBy('created_at', 'desc')->paginate(8)->withQueryString();
 
 
         return view('admin.orders.index', compact('orders', 'dishes'));
