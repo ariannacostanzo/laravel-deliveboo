@@ -64,7 +64,6 @@ class RestaurantController extends Controller
         // Ottieni i parametri di ricerca
         $searchTerm = $request->input('searchTerm');
         $filters = $request->input('filters');
-    
         // query per la ricerca
         $query = Restaurant::query()
             ->with('types')
@@ -78,10 +77,10 @@ class RestaurantController extends Controller
                     $q->whereIn('label', $filters);
                 });
             });
-    
+
         // Esegui la query e restituisci i risultati
         $restaurants = $query->get();
-        
+
         return response()->json($restaurants);
     }
 }
