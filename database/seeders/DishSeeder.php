@@ -149,11 +149,11 @@ class DishSeeder extends Seeder
                 'image' => 'https://www.petitchef.it/imgupl/recipe/yakitori-manzo-e-formaggio--461332p726507.jpg'
             ],
             [
-                'name' => 'Acqua Naturale 1 l',
+                'name' => 'Acqua naturale 50cl',
                 'ingredients' => null,
                 'price' => 1.50,
                 'restaurant_id' => 1,
-                'image' => 'https://www.acquaacasatua.it/173193-large_default/acqua-sant-anna-naturale-da-1-litri-in-plasticapet-scegli-il-numero-di-casse.jpg'
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
             ],
             [
                 'name' => 'Acqua Lete 1 l',
@@ -1150,6 +1150,55 @@ class DishSeeder extends Seeder
                 'image' => 'https://www.whollytasteful.com/wp-content/uploads/2022/02/shrimp-poke-bowl-featured.jpg'
             ],
             [
+                'name' => 'Birra Heineken',
+                'ingredients' => null,
+                'price' => 3.50,
+                'restaurant_id' => 9,
+                'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 9,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 9,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
+            ],
+            [
+                'name' => 'Vino Pecorino',
+                'ingredients' => null,
+                'price' => 12.50,
+                'restaurant_id' => 9,
+                'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
+            ],
+            [
+                'name' => 'Birra Heineken',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 9,
+                'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 1.50,
+                'restaurant_id' => 9,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 1.50,
+                'restaurant_id' => 9,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
+            ],
+            [
                 'name' => 'Whopper',
                 'ingredients' => 'Hamburger di Manzo, Pomodoro, Lattuga, Cipolla, Formaggio, Salsa di Maionese',
                 'price' => 5.99,
@@ -1332,55 +1381,6 @@ class DishSeeder extends Seeder
                 'image' => 'https://www.giallozafferano.it/images/ricette/169/16964/foto_hd/hd650x433_wm.jpg'
             ],
             [
-                'name' => 'Birra Heineken',
-                'ingredients' => null,
-                'price' => 3.50,
-                'restaurant_id' => 11,
-                'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
-            ],
-            [
-                'name' => 'Acqua naturale 50cl',
-                'ingredients' => null,
-                'price' => 2.50,
-                'restaurant_id' => 11,
-                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
-            ],
-            [
-                'name' => 'Acqua frizzante 50cl',
-                'ingredients' => null,
-                'price' => 2.50,
-                'restaurant_id' => 11,
-                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
-            ],
-            [
-                'name' => 'Vino Pecorino',
-                'ingredients' => null,
-                'price' => 12.50,
-                'restaurant_id' => 11,
-                'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
-            ],
-            [
-                'name' => 'Birra Heineken',
-                'ingredients' => null,
-                'price' => 2.50,
-                'restaurant_id' => 12,
-                'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
-            ],
-            [
-                'name' => 'Acqua naturale 50cl',
-                'ingredients' => null,
-                'price' => 1.50,
-                'restaurant_id' => 12,
-                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
-            ],
-            [
-                'name' => 'Acqua frizzante 50cl',
-                'ingredients' => null,
-                'price' => 1.50,
-                'restaurant_id' => 12,
-                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
-            ],
-            [
                 'name' => 'Suppli',
                 'ingredients' => 'Riso, Mozzarella, Sugo',
                 'price' => 1.50,
@@ -1486,25 +1486,53 @@ class DishSeeder extends Seeder
                 'image' => 'https://media-cdn.tripadvisor.com/media/photo-s/12/89/2a/a5/pizza-con-patate-porcini.jpg'
             ],
             [
+                'name' => 'Birra Heineken',
+                'ingredients' => null,
+                'price' => 3.50,
+                'restaurant_id' => 11,
+                'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
+            ],
+            [
                 'name' => 'Acqua naturale 50cl',
                 'ingredients' => null,
                 'price' => 2.50,
-                'restaurant_id' => 13,
+                'restaurant_id' => 11,
                 'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
             ],
             [
                 'name' => 'Acqua frizzante 50cl',
                 'ingredients' => null,
                 'price' => 2.50,
-                'restaurant_id' => 13,
+                'restaurant_id' => 11,
                 'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
             ],
             [
                 'name' => 'Vino Pecorino',
                 'ingredients' => null,
                 'price' => 12.50,
-                'restaurant_id' => 13,
+                'restaurant_id' => 11,
                 'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
+            ],
+            [
+                'name' => 'Birra Heineken',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 12,
+                'image' => 'https://content.dambros.it/uploads/2016/03/30122253/0000041719.jpg'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 1.50,
+                'restaurant_id' => 12,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 1.50,
+                'restaurant_id' => 12,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
             ],
             [
                 'name' => 'Poke medio',
@@ -1545,21 +1573,21 @@ class DishSeeder extends Seeder
                 'name' => 'Acqua naturale 50cl',
                 'ingredients' => null,
                 'price' => 2.50,
-                'restaurant_id' => 14,
+                'restaurant_id' => 13,
                 'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
             ],
             [
                 'name' => 'Acqua frizzante 50cl',
                 'ingredients' => null,
                 'price' => 2.50,
-                'restaurant_id' => 14,
+                'restaurant_id' => 13,
                 'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
             ],
             [
                 'name' => 'Vino Pecorino',
                 'ingredients' => null,
                 'price' => 12.50,
-                'restaurant_id' => 14,
+                'restaurant_id' => 13,
                 'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
             ],
             [
@@ -1615,21 +1643,21 @@ class DishSeeder extends Seeder
                 'name' => 'Acqua naturale 50cl',
                 'ingredients' => null,
                 'price' => 2.50,
-                'restaurant_id' => 15,
+                'restaurant_id' => 14,
                 'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
             ],
             [
                 'name' => 'Acqua frizzante 50cl',
                 'ingredients' => null,
                 'price' => 2.50,
-                'restaurant_id' => 15,
+                'restaurant_id' => 14,
                 'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
             ],
             [
                 'name' => 'Vino Pecorino',
                 'ingredients' => null,
                 'price' => 12.50,
-                'restaurant_id' => 15,
+                'restaurant_id' => 14,
                 'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
             ],
             [
@@ -1736,6 +1764,27 @@ class DishSeeder extends Seeder
                 'price' => 8.50,
                 'restaurant_id' => 15,
                 'image' => 'https://blog.giallozafferano.it/cucinoperpassione/wp-content/uploads/2019/09/Pizza-rossa-tonno-e-cipolla.jpg'
+            ],
+            [
+                'name' => 'Acqua naturale 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 15,
+                'image' => 'https://spaziopizzadelivery.it/cdn/shop/products/Acquanaturale50cl_756f6cbf-8e8f-4bd9-b402-6d65507e8302.jpg?v=1709639482'
+            ],
+            [
+                'name' => 'Acqua frizzante 50cl',
+                'ingredients' => null,
+                'price' => 2.50,
+                'restaurant_id' => 15,
+                'image' => 'https://cdn1.marcocusano.cloud/D936542D/products/178-c4ca4238a0b923820dcc509a6f75849b'
+            ],
+            [
+                'name' => 'Vino Pecorino',
+                'ingredients' => null,
+                'price' => 12.50,
+                'restaurant_id' => 15,
+                'image' => 'https://stappando.it/wp-content/uploads/2020/12/260821-pecorino-tollo-terre-di-chieti-679.jpg'
             ],
           
           

@@ -2,7 +2,7 @@
 
 @section('content')
  <div class="container">
-  <h1 class="text-center my-5">STATISTICHE ORDINI MENSILI</h1>
+  <h1 class="text-center my-5">STATISTICHE ORDINI MENSILI DI UN ANNO</h1>
    <canvas id="myChart"></canvas> 
  </div>
 
