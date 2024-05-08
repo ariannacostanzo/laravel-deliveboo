@@ -39,21 +39,21 @@ const validateForm = () => {
     }
 
     //! validazione "Ingredienti"
-    const ingredientsValue = document
-        .getElementById("ingredients")
-        .value.trim();
-    const ingredientsInput = document.getElementById("ingredients");
-    const ingredientsError = document.getElementById("ingredients-error");
+    // const ingredientsValue = document
+    //     .getElementById("ingredients")
+    //     .value.trim();
+    // const ingredientsInput = document.getElementById("ingredients");
+    // const ingredientsError = document.getElementById("ingredients-error");
 
-    resetError(ingredientsInput, ingredientsError);
+    // resetError(ingredientsInput, ingredientsError);
 
-    if (!/^[a-zA-Z\s]*$/.test(ingredientsValue)) {
-        wrongValue(
-            ingredientsInput,
-            ingredientsError,
-            "Gli ingredienti possono contenere solo lettere e spazi."
-        );
-    }
+    // if (!/^[a-zA-Z\s]*$/.test(ingredientsValue)) {
+    //     wrongValue(
+    //         ingredientsInput,
+    //         ingredientsError,
+    //         "Gli ingredienti possono contenere solo lettere e spazi."
+    //     );
+    // }
 
     // ! Validazione "Indirizzo Email"
     const priceValue = document.getElementById("price").value.trim();
